@@ -1,0 +1,6 @@
+body {
+    background-image: url('/img/pikaso_texttoimage_35mm-film-photography-Plentiful-luminous-bananas-d.jpeg');
+    background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center center; /* Centra la imagen */
+}

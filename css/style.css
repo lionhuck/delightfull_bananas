@@ -1,12 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
 
+/* body, html{
+    height: 100%;
+    overflow: hidden;
+} */
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     /* font-family: "Bungee", sans-serif; */
 }
-
 
 /* -----------------intro-----------------*/
 .contenedor{
@@ -18,48 +22,65 @@
 }
 
 .contenedor video{
-    width: 100%;
-    height: 120%;
-    margin-top: -25px;
-    margin-left: -50px;    
-}
+    width: 120%;
+    height: 100%;
+    /* margin-top: -25px;*/
+    margin-left: -50px; 
+    overflow-y: hidden;
+} 
 
 .text-box{
     position: absolute;
     top:0;
     left:0;
-    background:rgb(0, 0, 0);
+    /* background-color: black; */
+    background:rgb(0, 15, 20);
+
     height: 100%;
     width: 100%;
-    /* color:#b8aa94; */
+
+    /* color:hsla(56, 69%, 49%, 0.836); */
+
+    color:#ffee00;
+    /* color: #1bfff4; */
+
+    /* color:#05010f; */
     /* color:#e0badd; */
-    color: white;
-    /* color:#e2ddc9; */
-    display: flex;
-    align-items: center;
+    /* color: white; */
+    
+    /* display: flex; */
+    /* align-items: center; */
     justify-content: center;
     text-align:left;
-    font-size: 40px;
+    font-size: 75px;
     font-weight: 900;
     mix-blend-mode:darken;
-    line-height: 1.17;
-    padding-left: 10px;
+    line-height: 110%;
+    letter-spacing: 2px;
+    padding-left: 3%;
+    padding-top: 10%;
+
     font-family: "Bungee", sans-serif;  
 }
 
 
-
-.logo-inicio{
-    position: absolute;
-    bottom: -55px;
-    background-color: rgb(0, 0, 0);
-    width: 100%;
-    text-align: center;
-    
-
+@media (max-width: 375px) {
+    .text-box {
+        font-size: 60px;
+    }
 }
 
+/*! El color del logo es #B49826 */
+.logo-inicio{
+    position: absolute;
+    bottom: 10%;
+    left: -0.5%;
+    /* background-color: rgb(0, 0, 0); */
+    width: 100%;
+    text-align: center;
+    justify-content: center;
 
+}
 
 
 /*--------------------index------------------ */

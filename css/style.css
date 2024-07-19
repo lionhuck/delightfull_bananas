@@ -186,8 +186,11 @@ i{
 /*--------------------- cards ------------------------*/
 .card h1{
     font-family: "Bungee", sans-serif;
-    color: #e0badd;
+    color: #8d840c;
     /* -webkit-text-stroke-width: 0.9px;
     -webkit-text-stroke-color:grey;  */
 }
-
+.title-sections h1{
+    font-family: "Bungee", sans-serif;
+    color: #8d840c;
+}

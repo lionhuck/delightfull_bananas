@@ -14,92 +14,104 @@
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
     crossorigin="anonymous"/>
 
+  <!-- íconos: -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+
+  <style>
+    .offcanvas-end {
+      background-image: url('img/logo/fondo_navbar_negro.png'); 
+      background-size:contain; 
+    }
+  </style>
+
+
 </head>
 
-
-
-<body style="background-color: rgb(0, 0, 0);">
-  <header class="pb-5">
-    <nav class="navbar navbar-dark fixed-top" style="background-color: black;">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index_vares.html">
-              <img src="img/logo/logo vares rosa-nav-recort.png" style="height: 50px;" alt="">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-                aria-controls="offcanvasNavbar" aria-label="Alternar navegación">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="offcanvas offcanvas-end text-bg-dark" style="opacity: .8;" tabindex="-1" id="offcanvasNavbar"
-                aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
-                    <!-- <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menú</h5> -->
-                    <button type="button" class="btn-close btn-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
+<body style="background-color: rgb(0, 23, 22)">
+    <header class="pb-5">
+        <nav class="navbar navbar-dark fixed-top" style="background-color: rgb(0, 15, 14);">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                  <img src="img/logo/Vares (1)-fotor-bg-remover-cortado.png" style="height: 25px;" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                    aria-controls="offcanvasNavbar" aria-label="Alternar navegación">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" style="opacity: .8;" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
                     
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <h3 class="h4" style="color: #e0badd;">¿Qué tomamos hoy? </h3> 
-                        <li class="nav-item" >
-                            <a class="nav-link active" aria-current="page" href="#">Atrevidos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Autor</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Gin Tonic</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link active" aria-current="page" href="#">Caipis</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link active" aria-current="page" href="#">Clásicos</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link active" aria-current="page" href="#">Spritz</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link active" aria-current="page" href="#">Birras</a>
-                        </li>
-                        <br>
-                        <h3 class="h4" style="color: #e0badd;">¿Y para comer?</h3> 
-                        <li class="nav-item">
-                          <a class="nav-link active" aria-current="page" href="#">Burgers</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link active" aria-current="page" href="#">Papas</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#cart">
-                                <button class="btn btn-outline-light position-relative">
-                                    <i class="fas fa-shopping-cart"></i>
-                                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                                        <span class="visually-hidden">artículos en el carrito</span>
-                                    </span>
-                                </button>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                    <div class="offcanvas-header">
+                        <button type="button" class="btn-close btn-warning" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        <h6 class="saludo-user">Hola User</h6>
+                        <a href="#">
+                          <i class="bi bi-person-circle fs-1"></i>
+                        </a>
+                    </div>
+  
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <h3 class="h4">¿Qué tomamos hoy? </h3> 
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#atrevidos" data-bs-dismiss="offcanvas">Atrevidos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#autor" data-bs-dismiss="offcanvas">Autor</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#gin-tonic" data-bs-dismiss="offcanvas">Gin Tonic</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#caipis" data-bs-dismiss="offcanvas">Caipis</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#clasicos" data-bs-dismiss="offcanvas">Clásicos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#spritz" data-bs-dismiss="offcanvas">Spritz</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#birras" data-bs-dismiss="offcanvas">Birras</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#burgers" data-bs-dismiss="offcanvas">Burgers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#papas" data-bs-dismiss="offcanvas">Papas</a>
+                            </li>
+  
+                            <li class="nav-item">
+                                <a class="nav-link" href="#cart">
+                                    <!-- <button class="btn btn-outline-dark position-relative">
+                                      <i class="bi bi-cart fs-3"></i>
+                                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                            <span class="visually-hidden">artículos en el carrito</span>
+                                        </span>
+                                    </button> -->
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>  
             </div>
-        </div>
-    </nav>
-</header>
-    <section>
+        </nav>
+    </header>
+    <section id="atrevidos"> <!-- atrevidos -->
         <div class="container py-4">
-            <div class="col-12">
-                <h3>Atrevidos</h3>
+            <div class="title-sections">
+                <h1 class="card-title">Atrevidos</h1>
             </div>
-                <div class="card border-dark" >
+                <br>
+                <div class="card border-dark">
                     <div class="row g-0">
                         <div class="col-5" >
-                            <img class="img-fluid rounded-start" src="img/clasicos/campari.jpg" alt="" style="height: 100%; object-fit: cover;">
+                            <img class="img-fluid rounded-start" src="img/nuevos/chocokat.jpg" alt="" style="height: 100%; object-fit: cover;">
                         </div>
                         <div class="col-7">
                             <div class="card-body d-grid">
-                                <h1 class="h5 card-title">Campari</h1>
-                                <p class="card-text">Campari con jugo de naranja</p>
-                                <p>$2.000</p>
+                                <h1 class="h5 card-title">Chocokat</h1>
+                                <p class="card-text">Licor de chocolate, absolut de vainilla, licor de amaretto, leche y salsa de chocolate</p>
+                                <p>$5.200</p>
                                 <button class="btn btn-dark btn-sm">Cargar al carrito</button>
                                 <footer class=""></footer>
                             </div>
@@ -108,32 +120,32 @@
                 </div>
                 
                 <div class="card border-dark my-2" >
-                <div class="row g-0">
-                    <div class="col-5" >
-                        <img class="img-fluid rounded-start" src="img/clasicos/mojito.jpg" alt="" style="height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="col-7">
-                        <div class="card-body d-grid">
-                            <h1 class="h5 card-title">Mojito</h1>
-                            <p class="card-text">Ron Malibú, menta y lima</p>
-                            <p>$2.000</p>
-                            <button class="btn btn-dark btn-sm">Cargar al carrito</button>
-                            <footer class=""></footer>
+                    <div class="row g-0">
+                        <div class="col-5" >
+                            <img class="img-fluid rounded-start" src="img/nuevos/dolly_pop_cherry.jpg" alt="" style="height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="col-7">
+                            <div class="card-body d-grid">
+                                <h1 class="h5 card-title">Dolly pop cherry</h1>
+                                <p class="card-text">Vodka, licor de cherry y frutilla</p>
+                                <p>$4.500</p>
+                                <button class="btn btn-dark btn-sm">Cargar al carrito</button>
+                                <footer class=""></footer>
+                            </div>
                         </div>
                     </div>
-                </div>
                 </div>
             
             <div class="card border-dark my-2" >
                 <div class="row g-0">
                     <div class="col-5" >
-                        <img class="img-fluid rounded-start" src="img/clasicos/fernet.jpg" alt="" style="height: 100%; object-fit: cover;">
+                        <img class="img-fluid rounded-start" src="img/nuevos/dolly_pop_uva.jpg" alt="" style="height: 100%; object-fit: cover;">
                     </div>
                     <div class="col-7">
                         <div class="card-body d-grid">
-                            <h1 class="h5 card-title">Fernet con Cola</h1>
-                            <p class="card-text">Fernet Branca con Coca Cola</p>
-                            <p>$2.000</p>
+                            <h1 class="h5 card-title">Dolly pop uva</h1>
+                            <p class="card-text">Vodka, licor de violetas y cordial de uva</p>
+                            <p>$5.200</p>
                             <button class="btn btn-dark btn-sm">Cargar al carrito</button>
                             <footer class=""></footer>
                         </div>
@@ -141,9 +153,636 @@
                 </div>
             </div>
 
+            <div class="card border-dark my-2" >
+                <div class="row g-0">
+                    <div class="col-5" >
+                        <img class="img-fluid rounded-start" src="img/nuevos/gomitas.jpg" alt="" style="height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="col-7">
+                        <div class="card-body d-grid">
+                            <h1 class="h5 card-title">Gomitas</h1>
+                            <p class="card-text">Granadina, Vodka, Blue Curacao y jugo de Naranja</p>
+                            <p>$5.200</p>
+                            <button class="btn btn-dark btn-sm">Cargar al carrito</button>
+                            <footer class=""></footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+            <div class="card border-dark my-2" >
+                <div class="row g-0">
+                    <div class="col-5" >
+                        <img class="img-fluid rounded-start" src="img/nuevos/reina.jpg" alt="" style="height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="col-7">
+                        <div class="card-body d-grid">
+                            <h1 class="h5 card-title">Reina</h1>
+                            <p class="card-text">Frutos Rojos, Ron Dorado y limón</p>
+                            <p>$5.200</p>
+                            <button class="btn btn-dark btn-sm">Cargar al carrito</button>
+                            <footer class=""></footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>        
+    </section>  
+
+    <section id="autor"> <!-- autor -->
+        <div class="container py-4">
+            <div class="title-sections">
+                <h1 class="card-title">Autor</h1>
+            </div>
+                <br>
+                <div class="card border-dark" >
+                    <div class="row g-0">
+                        <div class="col-5" >
+                            <img class="img-fluid rounded-start" src="img/autor/bosque_sur.jpg" alt="" style="height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="col-7">
+                            <div class="card-body d-grid">
+                                <h1 class="h5 card-title">Bosque sur</h1>
+                                <p class="card-text">Gin london dry, néctar de jengibre, limón, almibar, bitter angostura, cerveza y menta</p>
+                                <p>$4.800</p>
+                                <button class="btn btn-dark btn-sm">Cargar al carrito</button>
+                                <footer class=""></footer>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card border-dark my-2">
+                    <div class="row g-0">
+                        <div class="col-5">
+                            <img class="img-fluid rounded-start" src="img/autor/braavos_mule.jpg" alt="" style="height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="col-7">
+                            <div class="card-body d-grid">
+                                <h1 class="h5 card-title">Braavos mule</h1>
+                                <p class="card-text">Ron dorado, cynar, reducción de frambuesa, limón y tuntura de cacao</p>
+                                <p>$5.200</p>
+                                <button class="btn btn-dark btn-sm">Cargar al carrito</button>
+                                <footer class=""></footer>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            <div class="card border-dark my-2">
+                <div class="row g-0">
+                    <div class="col-5">
+                        <img class="img-fluid rounded-start" src="img/autor/pentos_fix.jpg" alt="" style="height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="col-7">
+                        <div class="card-body d-grid">
+                            <h1 class="h5 card-title">Pentos fix</h1>
+                            <p class="card-text">Sernova, licor de sauco, limón, almibar, tintura de hibiscus y damasco</p>
+                            <p>$4.800</p>
+                            <button class="btn btn-dark btn-sm">Cargar al carrito</button>
+                            <footer class=""></footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card border-dark my-2">
+                <div class="row g-0">
+                    <div class="col-5" >
+                        <img class="img-fluid rounded-start" src="img/autor/vermucito.jpg" alt="" style="height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="col-7">
+                        <div class="card-body d-grid">
+                            <h1 class="h5 card-title">Vermucito</h1>
+                            <p class="card-text">Carpano Vermu, gin brighton, london dry, cordial de lima, soda de pera y perfume de lavanda</p>
+                            <p>$4.800</p>
+                            <button class="btn btn-dark btn-sm">Cargar al carrito</button>
+                            <footer class=""></footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card border-dark my-2">
+                <div class="row g-0">
+                    <div class="col-5" >
+                        <img class="img-fluid rounded-start" src="img/autor/vintage.jpg" alt="" style="height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="col-7">
+                        <div class="card-body d-grid">
+                            <h1 class="h5 card-title">Vintage</h1>
+                            <p class="card-text">Whisky americano, almibar, bitter de mango y pimineta negra, humo</p>
+                            <p>$5.200</p>
+                            <button class="btn btn-dark btn-sm">Cargar al carrito</button>
+                            <footer class=""></footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </section>  
+    
+    <section id="gin-tonic"> <!-- gin tonic -->
+        <div class="container py-4">
+            <div class="title-sections">
+                <h1 class="card-title">Gin tonic</h1>
+            </div>
+                <br>
+                <div class="card border-dark">
+                    <div class="row g-0">
+                        <div class="col-5" >
+                            <img class="img-fluid rounded-start" src="img/gin_tonic/gin_campamento.jpg" alt="" style="height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="col-7">
+                            <div class="card-body d-grid">
+                                <h1 class="h5 card-title">Gin campamento</h1>
+                                <p class="card-text">Eucalipto y cacap tostado</p>
+                                <p>$5.200</p>
+                                <button class="btn btn-dark btn-sm">Cargar al carrito</button>
+                                <footer class=""></footer>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card border-dark my-2" >
+                    <div class="row g-0">
+                        <div class="col-5" >
+                            <img class="img-fluid rounded-start" src="img/gin_tonic/gin_jamaica.jpg" alt="" style="height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="col-7">
+                            <div class="card-body d-grid">
+                                <h1 class="h5 card-title">Gin jamaica</h1>
+                                <p class="card-text">Albahaca e hibiscus</p>
+                                <p>$5.200</p>
+                                <button class="btn btn-dark btn-sm">Cargar al carrito</button>
+                                <footer class=""></footer>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            <div class="card border-dark my-2" >
+                <div class="row g-0">
+                    <div class="col-5" >
+                        <img class="img-fluid rounded-start" src="img/gin_tonic/gin_lunfardo.jpg" alt="" style="height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="col-7">
+                        <div class="card-body d-grid">
+                            <h1 class="h5 card-title">Gin lunfardo</h1>
+                            <p class="card-text">Carpano vermu, cedrón y pomelo</p>
+                            <p>$5.200</p>
+                            <button class="btn btn-dark btn-sm">Cargar al carrito</button>
+                            <footer class=""></footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card border-dark my-2" >
+                <div class="row g-0">
+                    <div class="col-5" >
+                        <img class="img-fluid rounded-start" src="img/gin_tonic/gin_passion.jpg" alt="" style="height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="col-7">
+                        <div class="card-body d-grid">
+                            <h1 class="h5 card-title">Gin passion</h1>
+                            <p class="card-text">Maracuyá y pimineta rosa</p>
+                            <p>$5.200</p>
+                            <button class="btn btn-dark btn-sm">Cargar al carrito</button>
+                            <footer class=""></footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="card border-dark my-2" >
+                <div class="row g-0">
+                    <div class="col-5" >
+                        <img class="img-fluid rounded-start" src="img/gin_tonic/gin_patagonico.jpg" alt="" style="height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="col-7">
+                        <div class="card-body d-grid">
+                            <h1 class="h5 card-title">Gin patagónico</h1>
+                            <p class="card-text">Pera y vino Chardonnay</p>
+                            <p>$5.200</p>
+                            <button class="btn btn-dark btn-sm">Cargar al carrito</button>
+                            <footer class=""></footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card border-dark my-2" >
+                <div class="row g-0">
+                    <div class="col-5" >
+                        <img class="img-fluid rounded-start" src="img/gin_tonic/gin_ramos.jpg" alt="" style="height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="col-7">
+                        <div class="card-body d-grid">
+                            <h1 class="h5 card-title">Gin ramos</h1>
+                            <p class="card-text">Frambuesa, menta y pimineta negra tostada</p>
+                            <p>$5.200</p>
+                            <button class="btn btn-dark btn-sm">Cargar al carrito</button>
+                            <footer class=""></footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card border-dark my-2" >
+                <div class="row g-0">
+                    <div class="col-5" >
+                        <img class="img-fluid rounded-start" src="img/gin_tonic/gin_tropical.jpg" alt="" style="height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="col-7">
+                        <div class="card-body d-grid">
+                            <h1 class="h5 card-title">Gin tropical</h1>
+                            <p class="card-text">Lemograss y ananá</p>
+                            <p>$5.200</p>
+                            <button class="btn btn-dark btn-sm">Cargar al carrito</button>
+                            <footer class=""></footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card border-dark my-2" >
+                <div class="row g-0">
+                    <div class="col-5" >
+                        <img class="img-fluid rounded-start" src="img/gin_tonic/tronic_2.0.jpg" alt="" style="height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="col-7">
+                        <div class="card-body d-grid">
+                            <h1 class="h5 card-title">Tronic 2.0</h1>
+                            <p class="card-text">Jengibre, pepino, menta y bitter</p>
+                            <p>$5.200</p>
+                            <button class="btn btn-dark btn-sm">Cargar al carrito</button>
+                            <footer class=""></footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card border-dark my-2" >
+                <div class="row g-0">
+                    <div class="col-5" >
+                        <img class="img-fluid rounded-start" src="img/gin_tonic/gin_paff.jpg" alt="" style="height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="col-7">
+                        <div class="card-body d-grid">
+                            <h1 class="h5 card-title">Gin paff</h1>
+                            <p class="card-text"></p>
+                            <p>$5.200</p>
+                            <button class="btn btn-dark btn-sm">Cargar al carrito</button>
+                            <footer class=""></footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card border-dark my-2" >
+                <div class="row g-0">
+                    <div class="col-5" >
+                        <img class="img-fluid rounded-start" src="img/gin_tonic/gin_paff_frutilla.jpg" alt="" style="height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="col-7">
+                        <div class="card-body d-grid">
+                            <h1 class="h5 card-title">Gin paff frutilla</h1>
+                            <p class="card-text"></p>
+                            <p>$5.200</p>
+                            <button class="btn btn-dark btn-sm">Cargar al carrito</button>
+                            <footer class=""></footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card border-dark my-2" >
+                <div class="row g-0">
+                    <div class="col-5" >
+                        <img class="img-fluid rounded-start" src="img/gin_tonic/gin_paff_uva.jpg" alt="" style="height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="col-7">
+                        <div class="card-body d-grid">
+                            <h1 class="h5 card-title">Gin paff uva</h1>
+                            <p class="card-text"></p>
+                            <p>$5.200</p>
+                            <button class="btn btn-dark btn-sm">Cargar al carrito</button>
+                            <footer class=""></footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section id="caipis"> <!-- caipis -->
+        <div class="container py-4">
+            <div class="title-sections">
+                <h1 class="card-title">Caipis</h1>
+            </div>
+                <br>
+                <div class="card border-dark" >
+                    <div class="row g-0">
+                        <div class="col-5" >
+                            <img class="img-fluid rounded-start" src="img/caipis/caipiberry.jpg" alt="" style="height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="col-7">
+                            <div class="card-body d-grid">
+                                <h1 class="h5 card-title">Caipiberry</h1>
+                                <p class="card-text"></p>
+                                <p>$4.600</p>
+                                <button class="btn btn-dark btn-sm">Cargar al carrito</button>
+                                <footer class=""></footer>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card border-dark my-2">
+                    <div class="row g-0">
+                        <div class="col-5">
+                            <img class="img-fluid rounded-start" src="img/caipis/caipijagger.jpg" alt="" style="height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="col-7">
+                            <div class="card-body d-grid">
+                                <h1 class="h5 card-title">Caipijagger</h1>
+                                <p class="card-text"></p>
+                                <p>$4.600</p>
+                                <button class="btn btn-dark btn-sm">Cargar al carrito</button>
+                                <footer class=""></footer>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            <div class="card border-dark my-2">
+                <div class="row g-0">
+                    <div class="col-5">
+                        <img class="img-fluid rounded-start" src="img/caipis/caipirinha.jpg" alt="" style="height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="col-7">
+                        <div class="card-body d-grid">
+                            <h1 class="h5 card-title">Caipirinha</h1>
+                            <p class="card-text"></p>
+                            <p>$4.600</p>
+                            <button class="btn btn-dark btn-sm">Cargar al carrito</button>
+                            <footer class=""></footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card border-dark my-2">
+                <div class="row g-0">
+                    <div class="col-5" >
+                        <img class="img-fluid rounded-start" src="img/caipis/caipitropical.jpg" alt="" style="height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="col-7">
+                        <div class="card-body d-grid">
+                            <h1 class="h5 card-title">Caipitropical</h1>
+                            <p class="card-text"></p>
+                            <p>$4.600</p>
+                            <button class="btn btn-dark btn-sm">Cargar al carrito</button>
+                            <footer class=""></footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </section>
+
+    <section id="clasicos"> <!-- clasicos -->
+        <div class="container py-4">
+            <div class="title-sections">
+                <h1 class="card-title">Clásicos</h1>
+            </div>
+                <br>
+                <div class="card border-dark" >
+                    <div class="row g-0">
+                        <div class="col-5" >
+                            <img class="img-fluid rounded-start" src="img/clasicos/campari.jpg" alt="" style="height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="col-7">
+                            <div class="card-body d-grid">
+                                <h1 class="h5 card-title">Campari</h1>
+                                <p class="card-text"></p>
+                                <p>$4.600</p>
+                                <button class="btn btn-dark btn-sm">Cargar al carrito</button>
+                                <footer class=""></footer>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card border-dark my-2">
+                    <div class="row g-0">
+                        <div class="col-5">
+                            <img class="img-fluid rounded-start" src="img/clasicos/fernet.jpg" alt="" style="height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="col-7">
+                            <div class="card-body d-grid">
+                                <h1 class="h5 card-title">Fernet branca</h1>
+                                <p class="card-text"></p>
+                                <p>$4.600</p>
+                                <button class="btn btn-dark btn-sm">Cargar al carrito</button>
+                                <footer class=""></footer>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            <div class="card border-dark my-2">
+                <div class="row g-0">
+                    <div class="col-5">
+                        <img class="img-fluid rounded-start" src="img/clasicos/mojito.jpg" alt="" style="height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="col-7">
+                        <div class="card-body d-grid">
+                            <h1 class="h5 card-title">Mojito</h1>
+                            <p class="card-text"></p>
+                            <p>$4.600</p>
+                            <button class="btn btn-dark btn-sm">Cargar al carrito</button>
+                            <footer class=""></footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>    
+
+    <section id="spritz"> <!-- spritz -->
+        <div class="container py-4">
+            <div class="title-sections">
+                <h1 class="card-title">Spritz</h1>
+            </div>
+                <br>
+                <div class="card border-dark" >
+                    <div class="row g-0">
+                        <div class="col-5" >
+                            <img class="img-fluid rounded-start" src="img/spritz/spritz_n1.jpg" alt="" style="height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="col-7">
+                            <div class="card-body d-grid">
+                                <h1 class="h5 card-title">Spritz n1</h1>
+                                <p class="card-text"></p>
+                                <p>$5.150</p>
+                                <button class="btn btn-dark btn-sm">Cargar al carrito</button>
+                                <footer class=""></footer>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card border-dark my-2">
+                    <div class="row g-0">
+                        <div class="col-5">
+                            <img class="img-fluid rounded-start" src="img/spritz/spritz_n2.jpg" alt="" style="height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="col-7">
+                            <div class="card-body d-grid">
+                                <h1 class="h5 card-title">Spritz n2</h1>
+                                <p class="card-text"></p>
+                                <p>$5.150</p>
+                                <button class="btn btn-dark btn-sm">Cargar al carrito</button>
+                                <footer class=""></footer>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            <div class="card border-dark my-2">
+                <div class="row g-0">
+                    <div class="col-5">
+                        <img class="img-fluid rounded-start" src="img/spritz/spritz_n3.jpg" alt="" style="height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="col-7">
+                        <div class="card-body d-grid">
+                            <h1 class="h5 card-title">Spritz n3</h1>
+                            <p class="card-text"></p>
+                            <p>$5.150</p>
+                            <button class="btn btn-dark btn-sm">Cargar al carrito</button>
+                            <footer class=""></footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card border-dark my-2" >
+                <div class="row g-0">
+                    <div class="col-5" >
+                        <img class="img-fluid rounded-start" src="img/spritz/spritz_n4.jpg" alt="" style="height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="col-7">
+                        <div class="card-body d-grid">
+                            <h1 class="h5 card-title">Spritz n4</h1>
+                            <p class="card-text"></p>
+                            <p>$5.150</p>
+                            <button class="btn btn-dark btn-sm">Cargar al carrito</button>
+                            <footer class=""></footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card border-dark my-2">
+                <div class="row g-0">
+                    <div class="col-5">
+                        <img class="img-fluid rounded-start" src="img/spritz/spritz_n5.jpg" alt="" style="height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="col-7">
+                        <div class="card-body d-grid">
+                            <h1 class="h5 card-title">Spritz n5</h1>
+                            <p class="card-text"></p>
+                            <p>$5.150</p>
+                            <button class="btn btn-dark btn-sm">Cargar al carrito</button>
+                            <footer class=""></footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="card border-dark my-2">
+                <div class="row g-0">
+                    <div class="col-5">
+                        <img class="img-fluid rounded-start" src="img/spritz/spritz_n6.jpg" alt="" style="height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="col-7">
+                        <div class="card-body d-grid">
+                            <h1 class="h5 card-title">Spritz n6</h1>
+                            <p class="card-text"></p>
+                            <p>$5.150</p>
+                            <button class="btn btn-dark btn-sm">Cargar al carrito</button>
+                            <footer class=""></footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>    
+
+  <div class="my-5">
+    <br>
+  </div> 
+  <!---- navbar bottom ---->
+  <nav class="navbar-bottom navbar navbar-dark fixed-bottom" style="background-color: rgb(0, 15, 14)">
+    <div class="container-fluid d-flex justify-content-around">
+      <a href="#">
+        <i class="bi bi-geo-alt fs-1"></i>
+      </a>
+      <a href="#">
+        <i class="bi bi-bell fs-1"></i>
+      </a>
+      <a href="#">
+        <i class="bi bi-cart fs-1"></i>
+        <span class="badge bg-danger">5</span>
+      </a>
+    </div>
+  </nav>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <script
+  src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+  integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+  crossorigin="anonymous"
+  ></script>
+
+  <script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+  integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+  crossorigin="anonymous"
+  ></script>  
+  <!-- SCRIPT PARA CERRAR EL NAV UNA VEZ SELECCIONADA LA SECCIÑÓN -->
+  <!-- <script>
+    document.querySelectorAll('.offcanvas a').forEach(anchor => {
+        anchor.addEventListener('click', (event) => {
+        const offcanvasElement = document.querySelector('.offcanvas');
+        const offcanvasInstance = bootstrap.Offcanvas.getInstance(offcanvasElement);
+
+        // Cerrar el offcanvas
+        offcanvasInstance.hide();
+
+        // Esperar un poco antes de permitir el comportamiento del enlace
+        setTimeout(() => {
+            if (anchor.getAttribute('href').startsWith('#')) {
+            const targetId = anchor.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            }
+            } else {
+            window.location.href = anchor.getAttribute('href');
+            }
+        }, 200);
+        });
+    });
+   </script> -->
+  
 </body>
 </html>

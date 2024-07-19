@@ -1,3 +1,42 @@
+// -------------- Index -----------------
+let lastClickedContainer = null;
+
+document.querySelectorAll('.image-container').forEach(container => {
+let clickCount = 0;
+container.addEventListener('click', function() {
+    if (lastClickedContainer && lastClickedContainer !== this) {
+    // Restablece el último contenedor clicado al estado original
+    resetContainer(lastClickedContainer);
+    lastClickedContainer = null;
+    }
+    
+    clickCount++;
+    
+    if (clickCount === 1) {
+    // Primer clic: aplicar efecto hover
+    this.querySelector('.image-wrapper img').style.transform = 'scale(1.07)';
+    this.querySelector('.title-overlay h3').style.opacity = '0';
+    this.querySelector('.title-overlay').style.backgroundColor = 'transparent';
+    lastClickedContainer = this;
+    } else if (clickCount === 2) {
+    // Segundo clic: redirigir a la URL
+    window.location.href = this.dataset.url;
+    }
+});
+
+// Reiniciar el contador después de un tiempo
+container.addEventListener('transitionend', function() {
+    setTimeout(() => { clickCount = 0; }, 1000);
+});
+});
+
+function resetContainer(container) {
+container.querySelector('.image-wrapper img').style.transform = 'scale(1)';
+container.querySelector('.title-overlay h3').style.opacity = '1';
+container.querySelector('.title-overlay').style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+}
+
+
 document.getElementById('formularioRegistro').addEventListener('submit', function (event) {
     event.preventDefault();
 
@@ -68,3 +107,22 @@ function generarId() {
     localStorage.setItem('idUsuario', id.toString());
     return id;
 }
+
+
+
+
+
+
+// otra opción:
+// agregar a cada .image-container: data-url="pagina1.html"
+
+// document.querySelectorAll('.image-container').forEach(container => {
+// container.addEventListener('click', function() {
+//     Espera un momento para que el efecto hover se complete
+//     setTimeout(() => {
+//     window.location.href = this.dataset.url;
+//     }, 200); // Ajusta el tiempo si es necesario
+// });
+// });
+
+

@@ -1,154 +1,163 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <title>DELIGHTFULL | SHOPPING-CART</title>
-        <!-- Required meta tags -->
-        <meta charset="utf-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
 
-        <!-- Bootstrap CSS v5.2.1 -->
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-            crossorigin="anonymous"
-        />
-        <link rel="stylesheet" href="css/style.css">
-    </head>
+<head>
+    <title>DELIGHTFULL | SHOPPING-CART</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <body>
-        <header class="pb-5">
-            <nav class="navbar navbar-dark bg-dark fixed-top">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="index.html">DELIGHTFULL BANANAS</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-                        aria-controls="offcanvasNavbar" aria-label="Alternar navegación">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar"
-                        aria-labelledby="offcanvasNavbarLabel">
-                        <div class="offcanvas-header">
-                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                        </div>
-                        <div class="offcanvas-body">
-                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">Comida</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">Tragos</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">Ubicacion</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="shop.html">
-                                        <button class="btn btn-outline-light position-relative">
-                                            <i class="fas fa-shopping-cart"></i>
-                                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                                                <span class="visually-hidden">artículos en el carrito</span>
-                                            </span>
-                                        </button>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body background="img/logo/Vares (1).png">
+    <header class="pb-5">
+        <nav class="navbar navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">DELIGHTFULL BANANAS</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Alternar navegación">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Comida</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Tragos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Ubicacion</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="shop.html">
+                                    <button class="btn btn-outline-light position-relative">
+                                        <i class="fas fa-shopping-cart"></i>
+                                        <span
+                                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                            <span class="visually-hidden">artículos en el carrito</span>
+                                        </span>
+                                    </button>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-            </nav>
-        </header>
-        <main class="container mt-5">
-            <div class="row">
-                <section class="col-md-6 p-4">
-                    <div class="card mb-3 row flex-row">
-                        <div class="card-body col-8">
-                            <h5 class="card-title">Fernet</h5>
-                            <p class="card-text">FERNET CON COCA Y LIMON</p>
-                            <p class="precio">7500</p>
-                            <a href="#" class="btn btn-danger">Eliminar</a>
-                        </div>
-                        <div class="col-4 d-flex align-items-center">
-                            <img src="img/clasicos/fernet.jpg" class="img-fluid" alt="Card image" height="100" width="100">
-                        </div>
-                    </div>
-                    <div class="card mb-3 row flex-row">
-                        <div class="card-body col-8">
-                            <h5 class="card-title">Fernet</h5>
-                            <p class="card-text">FERNET CON COCA Y LIMON</p>
-                            <p class="precio">7500</p>
-                            <a href="#" class="btn btn-danger">Eliminar</a>
-                        </div>
-                        <div class="col-4 d-flex align-items-center">
-                            <img src="img/clasicos/fernet.jpg" class="img-fluid" alt="Card image" height="100" width="100">
-                        </div>
-                    </div>
-                    <div class="card mb-3 row flex-row">
-                        <div class="card-body col-8">
-                            <h5 class="card-title">Fernet</h5>
-                            <p class="card-text">FERNET CON COCA Y LIMON</p>
-                            <p class="precio">7500</p>
-                            <a href="#" class="btn btn-danger">Eliminar</a>
-                        </div>
-                        <div class="col-4 d-flex align-items-center">
-                            <img src="img/clasicos/fernet.jpg" class="img-fluid" alt="Card image" height="100" width="100">
-                        </div>
-                    </div>
-                </section>
-    
-                <section class="col-md-6 p-3">
-                    <table class="table">
-                        <thead>
-                        <tr>
-                            <th scope="col">Articulo</th>
-                            <th scope="col">Cantidad</th>
-                            <th scope="col">Precio</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>FERNET</td>
-                            <td>1</td>
-                            <td>7500</td>
-                        </tr>
-                        <tr>
-                            <td>FERNET</td>
-                            <td>3</td>
-                            <td>7500</td>
-                        </tr>
-                        <tr>
-                            <td>FERNET</td>
-                            <td>2</td>
-                            <td>7500</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">Total</td>
-                            <td>45000</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </section>
             </div>
-        </main>
-    
-        <footer>
-            <!-- place footer here -->
-        </footer>
-        <!-- Bootstrap JavaScript Libraries -->
-        <script
-            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-            crossorigin="anonymous"
-        ></script>
+        </nav>
+    </header>
 
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-            crossorigin="anonymous"
-        ></script>
-    </body>
+
+    <div class="table-responsive container pt-4">
+
+
+        <div class="card mb-3 align-items-center" style="background-color: teal;">
+            <div class="card-body">
+                <h5 class="card-title">Este es tu carrito de compras!</h5>
+            </div>
+        </div>
+
+        <table class="col-10 table table-borderless table-primary align-items-center justify-content-center">
+            <thead class="table-dark">
+                <tr>
+                    <th>Imagen</th>
+                    <th>Descripcion</th>
+                    <th>Cantidad</th>
+                    <th>Precio</th>
+                    <th>Eliminar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-dark">
+                    <td><img src="img/clasicos/fernet.jpg" alt="" style="width: 80px; border-radius: 10%;"></td>
+                    <td>Fernet con Coca Cola</td>
+                    <td><input type="number" min="1" value="5" class="form-control" placeholder="Qty"
+                            style="width: 90px;"></td>
+                    <td>$1.500</td>
+                    <td><button type="button" name="" id="eliminar" class="btn btn-danger">X</button></td>
+                </tr>
+                <tr class="table-dark">
+                    <td><img src="img/clasicos/campari.jpg" alt="" style="width: 80px; border-radius: 10%;"></td>
+                    <td>Campari</td>
+                    <td><input type="number" min="1" value="5" class="form-control" placeholder="Qty"
+                            style="width: 90px;"></td>
+                    <td>$1.200</td>
+                    <td><button type="button" name="" id="eliminar" class="btn btn-danger">x</button></td>
+                </tr>
+                <tr class="table-dark">
+                    <td><img src="img/clasicos/mojito.jpg" alt="" style="width: 80px; border-radius: 10%;"></td>
+                    <td>Mojito</td>
+                    <td><input type="number" min="1" value="5" class="form-control" placeholder="Qty"
+                            style="width: 90px;"></td>
+                    <td>$950</td>
+                    <td><button type="button" name="" id="eliminar" class="btn btn-danger">X</button></td>
+                </tr>
+                <tr class="table-dark">
+                    <td><img src="img/burgers/burger.jpg" alt="" style="width: 80px; border-radius: 10%;"></td>
+                    <td>Hamburguesa Doble</td>
+                    <td><input type="number" min="1" value="5" class="form-control" placeholder="Qty"
+                            style="width: 90px;"></td>
+                    <td>$3.150</td>
+                    <td><button type="button" name="" id="eliminar" class="btn btn-danger">X</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="table-responsive">
+            <table class="table table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">Titulo</th>
+                        <th scope="col">Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="subtotal">
+                        <td>Subtotal</td>
+                        <td>$36.500</td>
+                    </tr>
+                    <tr class="descuento">
+                        <td>Efectivo (-10%)</td>
+                        <td>-10%</td>
+                    </tr>
+                    <tr class="total">
+                        <td>Total</td>
+                        <td>$32.850</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="d-grid gap-2">
+            <button type="button" name="" id="pagar" class="btn btn-success">
+                Ir a pagar
+            </button>
+        </div>
+
+    </div>
+
+
+    <footer>
+        <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>
-    

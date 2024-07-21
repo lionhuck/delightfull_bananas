@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+
+body, html{
+    /* height: 100%; */
+    /* overflow:auto; */
+    /* -ms-overflow-style: none; */
+    scrollbar-width: none;  
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: "Bungee", sans-serif; */
+}
+
+/* -----------------intro-----------------*/
+.contenedor{
+
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.contenedor video{
+    width: 120%;
+    height: 100%;
+    /* margin-top: -25px;*/
+    margin-left: -50px; 
+    overflow-y: hidden;
+} 
+
+.text-box{
+    position: absolute;
+    top:0;
+    left:0;
+    background:rgb(0, 28, 22);
+    /* otra opcion de background:*/
+    /* background-color: rgb(0, 18, 14); */
+
+    height: 100%;
+    width: 100%;
+    color:#ffee00;   
+    /* display: flex; */
+    /* align-items: center; */
+    justify-content: center;
+    text-align:left;
+    font-size: 75px;
+    font-weight: 900;
+    mix-blend-mode:darken;
+    line-height: 110%;
+    letter-spacing: 2px;
+    padding-left: 3%;
+    padding-top: 10%;
+
+    font-family: "Bungee", sans-serif;  
+}
+
+
+@media (max-width: 375px) {
+    .text-box {
+        font-size: 60px;
+    }
+}
+
+/*! El color del logo es #B49826 */
+.logo-inicio{
+    position: absolute;
+    bottom: 10%;
+    left: -0.5%;
+    /* background-color: rgb(0, 0, 0); */
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/*--------------------index------------------ */
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-wrapper img {
+    transition: transform 0.3s ease;
+    width: 100%;
+    height: auto;
+}
+
+
+.title-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    opacity: 0.7;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-family: "Bungee", sans-serif;
+    font-weight: 100;
+}
+
+
+.image-container:hover .image-wrapper img,
+.image-container:focus .image-wrapper img {
+    transform: scale(1.07);
+    
+}
+
+.title-overlay:hover h3,
+.title-overlay:focus h3{
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    
+}
+
+
+.title-overlay:hover, .title-overlay:focus{
+    background-color: transparent;
+    transition: 0.4s;
+}
+
+
+.image-container:hover .title-overlay,
+.image-container:focus .title-overlay {
+    opacity: 1;
+}
+
+.title-static {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    opacity: 0.7;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+/*------------------- navbar --------------------------*/
+
+.navbar{
+    font-family: "Bungee", sans-serif;
+    font-weight: 100;
+}
+
+.navbar h3{
+    color: #8d840c;
+}
+
+.navbar .btn-close{
+    background-color: #8d840c;
+}
+
+.saludo-user{
+    color: white;
+
+}
+
+
+/*------------------ iconos nav-bottom ----------------*/
+i{
+    color: #8d840c;
+}
+
+.navbar-bottom a{
+    text-decoration: none;
+}
+/*--------------------- cards ------------------------*/
+.card h1{
+    font-family: "Bungee", sans-serif;
+    color: #8d840c;
+    /* -webkit-text-stroke-width: 0.9px;
+    -webkit-text-stroke-color:grey;  */
+}
+.title-sections h1{
+    font-family: "Bungee", sans-serif;
+    color: #8d840c;
+}

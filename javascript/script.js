@@ -37,23 +37,32 @@ container.querySelector('.title-overlay').style.backgroundColor = 'rgba(0, 0, 0,
 }
 
 
+
+//Login y Registro
+
+
 document.getElementById('formularioRegistro').addEventListener('submit', function (event) {
     event.preventDefault();
 
-    const usuario = document.getElementById('regUsuario').value;
-    const contrasena = document.getElementById('regContrasena').value;
+    const nombre = document.getElementById('regNombre').value;
+    const apellido = document.getElementById('regApellido').value;
     const telefono = document.getElementById('regTelefono').value;
     const direccion = document.getElementById('regDireccion').value;
     const dni = document.getElementById('regDNI').value;
+    const usuario = document.getElementById('regUsuario').value;
+    const contrasena = document.getElementById('regContrasena').value;    
+    
 
-    if (validarRegistro(usuario, contrasena, telefono, direccion, dni)) {
+    if (validarRegistro(nombre, apellido, telefono, direccion, dni, usuario, contrasena)) {
         const nuevoUsuario = {
             id: generarId(),
-            usuario,
-            contrasena,
+            nombre,
+            apellido,
             telefono,
             direccion,
-            dni
+            dni,
+            usuario,
+            contrasena
         };
         let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
         usuarios.push(nuevoUsuario);
@@ -81,7 +90,7 @@ document.getElementById('formularioInicioSesion').addEventListener('submit', fun
     }
 });
 
-const validarRegistro = (usuario, contrasena, telefono, direccion, dni) => {
+const validarRegistro = (nombre, apellido, telefono, direccion, dni, usuario, contrasena) => {
     if (!usuario || usuario.length < 5) {
         alert('El nombre de usuario debe tener al menos 5 caracteres.');
         return false;
@@ -93,7 +102,7 @@ const validarRegistro = (usuario, contrasena, telefono, direccion, dni) => {
         return false;
     }
 
-    if (!telefono || !direccion || !dni) {
+    if (!nombre || !apellido || !telefono || !direccion || !dni) {
         alert('Por favor, completa todos los campos.');
         return false;
     }
@@ -107,7 +116,6 @@ function generarId() {
     localStorage.setItem('idUsuario', id.toString());
     return id;
 }
-
 
 
 

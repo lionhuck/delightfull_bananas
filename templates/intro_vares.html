@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Vares</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+
+<body>
+    <div class="contenedor">
+
+        <video autoplay loop muted>
+            <source src="{{ url_for('static', filename='video/brindis.mp4') }}" type="video/mp4">
+        </video>
+        
+        <div class="text-box">
+            <h4>cuando los amigos se unen, la magia sucede</h4>
+            <!-- <a class="logo-inicio" href="index_vares.html">
+                <img src="img/logo/Vares cortado (1)-fotor-bg-remover-20240714191842.png" alt="" height="130px">
+            </a> -->
+        </div>
+
+        <div>
+            <a class="logo-inicio" href="/index">
+                <img src="{{ url_for('static', filename='img/logo/Vares cortado (1)-fotor-bg-remover-20240714191842.png') }}" alt="" height="130px">
+            </a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

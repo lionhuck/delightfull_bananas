@@ -23,35 +23,35 @@
             <form class="row g-3" id="formularioRegistro">
                 <div class="col-md-6">
                     <label for="regNombre" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="regNombre" placeholder="ej: Juan">
+                    <input type="text" class="form-control" id="regNombre" required>
                 </div>
                 <div class="col-md-6">
                     <label for="regApellido" class="form-label">Apellido</label>
-                    <input type="text" class="form-control" id="regApellido" placeholder="Gonzalez">
-                </div>
-                <div class="col-12">
-                    <label for="regTelefono" class="form-label">Telefono</label>
-                    <input type="text" class="form-control" id="regTelefono" placeholder="ej: +54 358 123456789">
-                </div>
-                <div class="col-12">
-                    <label for="regDireccion" class="form-label">Direccion</label>
-                    <input type="text" class="form-control" id="regDireccion" placeholder="ej: San martin 1234">
+                    <input type="text" class="form-control" id="regApellido" required>
                 </div>
                 <div class="col-md-12">
                     <label for="regDNI" class="form-label">Dni</label>
-                    <input type="number" class="form-control" id="regDNI" placeholder="[Sin puntos ni separadores]">
+                    <input type="number" class="form-control" id="regDNI" required>
+                </div>
+                <div class="col-12">
+                    <label for="regTelefono" class="form-label">Teléfono</label>
+                    <input type="text" class="form-control" id="regTelefono" placeholder="+54 358 123456789" required>
+                </div>
+                <div class="col-12">
+                    <label for="regDireccion" class="form-label">E-mail</label>
+                    <input type="email" class="form-control" id="regDireccion" required>
                 </div>
                 <div class="col-md-12">
-                    <label for="regUsuario" class="form-label">Usuario</label>
-                    <input type="text" class="form-control" id="regUsuario" placeholder="ej: pepe44">
+                    <label for="regUsuario" class="form-label">Nombre de usuario</label>
+                    <input type="text" class="form-control" id="regUsuario" required>
                 </div>
                 <div class="col-md-6">
                     <label for="regContrasena" class="form-label">Contraseña</label>
-                    <input type="password" class="form-control" id="regContrasena">
+                    <input type="password" class="form-control" id="regContrasena" required>
                 </div>
                 <div class="col-md-6">
                     <label for="repetedPassword" class="form-label">Repetir Contraseña</label>
-                    <input type="password" class="form-control" id="repetedPassword">
+                    <input type="password" class="form-control" id="repetedPassword" required>
                 </div>
                 <div class="col-12 pb-3">
                     <button type="submit" class="btn btn-primary">Registrarse</button>
@@ -90,7 +90,8 @@
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
 
-    <script src="javascript/script.js"></script>
+    <script src="{{ url_for('static', filename='javascript/script.js') }}"></script>
+
 </body>
 
 </html>

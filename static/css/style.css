@@ -193,3 +193,7 @@ i{
     font-family: "Bungee", sans-serif;
     color: #8d840c;
 }
+.card-section{
+    padding-top: 10%;
+    margin-top: -10%; 
+}

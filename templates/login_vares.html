@@ -10,6 +10,13 @@
     <!-- Bootstrap CSS v5.2.1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+    <style>
+        .fondo-imagen{
+            background-image: url("{{ url_for('static', filename='img/logo/fondo_navbar_negro.png') }}");
+            /* background-size: contain; */
+        }
+    </style>    
 </head>
 
 <body>
@@ -17,70 +24,55 @@
         <!-- place navbar here -->
     </header>
     <main>
+        <div class="container fondo-imagen">
+            <div class="row">
+                <!-- <div class="alert alert-primary col-12 text-center" role="alert"> Registro </div> -->
+                <div >
+                    <img src="{{ url_for('static', filename='img/logo/Vares (1)-fotor-bg-remover-cortado.png')}}" alt="" height="40px">
+                </div>
+                <form id="formularioRegistro">
+                    <div class="col-6">
+                        <label for="regNombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="regNombre" required>
+                    </div>
+                    <div class="col-6">
+                        <label for="regApellido" class="form-label">Apellido</label>
+                        <input type="text" class="form-control" id="regApellido" required>
+                    </div>
+                    <div class="col-md-12">
+                        <label for="regDNI" class="form-label">Dni</label>
+                        <input type="number" class="form-control" id="regDNI" required>
+                    </div>
+                    <div class="col-12">
+                        <label for="regTelefono" class="form-label">Teléfono</label>
+                        <input type="text" class="form-control" id="regTelefono" placeholder="+54 358 123456789" required>
+                    </div>
+                    <div class="col-12">
+                        <label for="regDireccion" class="form-label">E-mail</label>
+                        <input type="email" class="form-control" id="regDireccion" required>
+                    </div>
+                    <div class="col-md-12">
+                        <label for="regUsuario" class="form-label">Nombre de usuario</label>
+                        <input type="text" class="form-control" id="regUsuario" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="regContrasena" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="regContrasena" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="repetedPassword" class="form-label">Repetir Contraseña</label>
+                        <input type="password" class="form-control" id="repetedPassword" required>
+                    </div>
+                    <div class="col-12 pb-3">
+                        <button type="submit" class="btn btn-primary">Registrarse</button>
+                    </div>
+                </form>
+            </div>
+            </div>    
 
-        <div class="container col-6">
-            <div class="alert alert-primary col-12 text-center" role="alert"> Registro </div>
-            <form class="row g-3" id="formularioRegistro">
-                <div class="col-md-6">
-                    <label for="regNombre" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="regNombre" placeholder="ej: Juan">
-                </div>
-                <div class="col-md-6">
-                    <label for="regApellido" class="form-label">Apellido</label>
-                    <input type="text" class="form-control" id="regApellido" placeholder="Gonzalez">
-                </div>
-                <div class="col-12">
-                    <label for="regTelefono" class="form-label">Telefono</label>
-                    <input type="text" class="form-control" id="regTelefono" placeholder="ej: +54 358 123456789">
-                </div>
-                <div class="col-12">
-                    <label for="regDireccion" class="form-label">Direccion</label>
-                    <input type="text" class="form-control" id="regDireccion" placeholder="ej: San martin 1234">
-                </div>
-                <div class="col-md-12">
-                    <label for="regDNI" class="form-label">Dni</label>
-                    <input type="number" class="form-control" id="regDNI" placeholder="[Sin puntos ni separadores]">
-                </div>
-                <div class="col-md-12">
-                    <label for="regUsuario" class="form-label">Usuario</label>
-                    <input type="text" class="form-control" id="regUsuario" placeholder="ej: pepe44">
-                </div>
-                <div class="col-md-6">
-                    <label for="regContrasena" class="form-label">Contraseña</label>
-                    <input type="password" class="form-control" id="regContrasena">
-                </div>
-                <div class="col-md-6">
-                    <label for="repetedPassword" class="form-label">Repetir Contraseña</label>
-                    <input type="password" class="form-control" id="repetedPassword">
-                </div>
-                <div class="col-12 pb-3">
-                    <button type="submit" class="btn btn-primary">Registrarse</button>
-                </div>
-            </form>
-
-
-            <div class="alert alert-primary col-12 text-center" role="alert"> Inicio de Sesion </div>
-            <form class="row g-3" id="formularioInicioSesion">
-                <div class="col-md-12">
-                    <label for="loginUsuarion" class="form-label">Nombre de usuario</label>
-                    <input type="text" class="form-control" id="loginUsuario" placeholder="ej: Juan">
-                </div>
-                <div class="col-md-12">
-                    <label for="loginContrasena" class="form-label">Contrasena</label>
-                    <input type="password" class="form-control" id="loginContrasena" placeholder="Gonzalez">
-                </div>
-                <div class="col-12 pb-3">
-                    <button type="submit" class="btn btn-success">Iniciar Sesion</button>
-                </div>
-        </div>
-        </form>
         </div>
 
 
-    </main>
-    <footer>
-        <!-- place footer here -->
-    </footer>
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
@@ -90,7 +82,8 @@
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
 
-    <script src="javascript/script.js"></script>
+    <script src="{{ url_for('static', filename='javascript/script.js') }}"></script>
+
 </body>
 
 </html>

@@ -7,6 +7,7 @@ body, html{
     scrollbar-width: none;  
 }
 
+
 *{
     margin: 0;
     padding: 0;
@@ -19,16 +20,16 @@ body, html{
 /* -----------------intro-----------------*/
 .contenedor{
 
-    width: 100%;
+    width: 100%; 
     height: 100vh;
     position: relative;
     overflow: hidden;
 }
 
 .contenedor video{
-    width: 120%;
-    height: 104%;
-    /* margin-top: -25px;*/
+    /* width: 120%; */
+    height: 99%;
+    /* margin-top: -5px; */
     margin-left: -50px; 
     overflow-y: hidden;
 } 

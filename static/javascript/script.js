@@ -90,22 +90,23 @@ document.getElementById('formularioRegistro').addEventListener('submit', functio
     const nombre = document.getElementById('regNombre').value;
     const apellido = document.getElementById('regApellido').value;
     const telefono = document.getElementById('regTelefono').value;
-    const direccion = document.getElementById('regDireccion').value;
     const dni = document.getElementById('regDNI').value;
+    const email = document.getElementById('regEmail').value;
     const usuario = document.getElementById('regUsuario').value;
     const contrasena = document.getElementById('regContrasena').value;    
-    
+    const contrasenaRepeted = document.getElementById('regContrasenaRepeted').value;
 
-    if (validarRegistro(nombre, apellido, telefono, direccion, dni, usuario, contrasena)) {
+    if (validarRegistro(nombre, apellido, telefono, dni, email, usuario, contrasena,contrasenaRepeted)) {
         const nuevoUsuario = {
             id: generarId(),
             nombre,
             apellido,
             telefono,
-            direccion,
             dni,
+            email,
             usuario,
-            contrasena
+            contrasena,
+            contrasenaRepeted
         };
         let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
         usuarios.push(nuevoUsuario);
@@ -128,6 +129,7 @@ document.getElementById('formularioInicioSesion').addEventListener('submit', fun
         sessionStorage.setItem('usuarioActual', JSON.stringify({ usuario }));
         alert('Inicio de sesión exitoso.');
         document.getElementById('formularioInicioSesion').reset();
+        window.location.href = '/index';
     } else {
         alert('Nombre de usuario o contraseña incorrectos.');
     }

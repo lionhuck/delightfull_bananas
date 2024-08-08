@@ -27,6 +27,12 @@ def login():
         'login_vares.html',
     )
     
+@app.route('/signin')
+def signin():
+    return render_template(
+        'signin_vares.html',
+    )    
+    
 @app.route('/shop')
 def shop():
     return render_template(

@@ -82,27 +82,27 @@ document.querySelectorAll('.offcanvas a').forEach(anchor => {
     });
 });
 
-// -----------------
+// ----------------- INTRO - REGISTRO DE USUARIO ------------------------------
 
 document.getElementById('formularioRegistro').addEventListener('submit', function (event) {
     event.preventDefault();
 
     const nombre = document.getElementById('regNombre').value;
     const apellido = document.getElementById('regApellido').value;
-    const telefono = document.getElementById('regTelefono').value;
-    const direccion = document.getElementById('regDireccion').value;
     const dni = document.getElementById('regDNI').value;
+    const telefono = document.getElementById('regTelefono').value;
+    const mail = document.getElementById('regmail').value;
     const usuario = document.getElementById('regUsuario').value;
     const contrasena = document.getElementById('regContrasena').value;    
     
 
-    if (validarRegistro(nombre, apellido, telefono, direccion, dni, usuario, contrasena)) {
+    if (validarRegistro(nombre, apellido, telefono, mail, dni, usuario, contrasena)) {
         const nuevoUsuario = {
             id: generarId(),
             nombre,
             apellido,
             telefono,
-            direccion,
+            mail,
             dni,
             usuario,
             contrasena
@@ -133,7 +133,7 @@ document.getElementById('formularioInicioSesion').addEventListener('submit', fun
     }
 });
 
-const validarRegistro = (nombre, apellido, telefono, direccion, dni, usuario, contrasena) => {
+const validarRegistro = (nombre, apellido, telefono, mail, dni, usuario, contrasena) => {
     if (!usuario || usuario.length < 5) {
         alert('El nombre de usuario debe tener al menos 5 caracteres.');
         return false;
@@ -145,7 +145,7 @@ const validarRegistro = (nombre, apellido, telefono, direccion, dni, usuario, co
         return false;
     }
 
-    if (!nombre || !apellido || !telefono || !direccion || !dni) {
+    if (!nombre || !apellido || !telefono || !mail || !dni) {
         alert('Por favor, completa todos los campos.');
         return false;
     }

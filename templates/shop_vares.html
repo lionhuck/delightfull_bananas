@@ -1,88 +1,77 @@
-
 {% extends "template_base.html" %}
 
 {% block title %}
     CARRITO DE COMPRAS
 {% endblock %}
 
-
 {% block content %}
-    <div class="table-responsive container pt-4">
-        <table class="col-10 table table-borderless table-primary align-items-center justify-content-center">
-            <!-- <thead class="table-dark">
-                <tr>
-                    <th>Imagen</th>
-                    <th>Descripcion</th>
-                    <th>Cantidad</th>
-                    <th>Precio</th>
-                    <th>Eliminar</th>
-                </tr>
-            </thead> -->
-            <tbody>
-                <tr class="table-dark">
-                    <td><img src="{{url_for('static', filename='img/clasicos/fernet.jpg')}}" alt="" style="width: 80px; border-radius: 10%;"></td>
-                    <td>Fernet con Coca Cola</td>
-                    <td><input type="number" min="1" value="5" class="form-control" placeholder="Qty"
-                            style="width: 90px;"></td>
-                    <td>$1.500</td>
-                    <td><button type="button" name="" id="eliminar" class="btn btn-danger">X</button></td>
-                </tr>
-                <tr class="table-dark">
-                    <td><img src="{{url_for('static', filename='img/clasicos/campari.jpg')}}" alt="" style="width: 80px; border-radius: 10%;"></td>
-                    <td>Campari</td>
-                    <td><input type="number" min="1" value="5" class="form-control" placeholder="Qty"
-                            style="width: 90px;"></td>
-                    <td>$1.200</td>
-                    <td><button type="button" name="" id="eliminar" class="btn btn-danger">X</button></td>
-                </tr>
-                <tr class="table-dark">
-                    <td><img src="{{url_for('static', filename='img/clasicos/mojito.jpg')}}" alt="" style="width: 80px; border-radius: 10%;"></td>
-                    <td>Mojito</td>
-                    <td><input type="number" min="1" value="5" class="form-control" placeholder="Qty"
-                            style="width: 90px;"></td>
-                    <td>$950</td>
-                    <td><button type="button" name="" id="eliminar" class="btn btn-danger">X</button></td>
-                </tr>
-                <tr class="table-dark">
-                    <td><img src="{{url_for('static', filename='img/burgers/burger.jpg')}}" alt="" style="width: 80px; border-radius: 10%;"></td>
-                    <td>Hamburguesa Doble</td>
-                    <td><input type="number" min="1" value="5" class="form-control" placeholder="Qty"
-                            style="width: 90px;"></td>
-                    <td>$3.150</td>
-                    <td><button type="button" name="" id="eliminar" class="btn btn-danger">X</button></td>
-                </tr>
-            </tbody>
-        </table>
+    <div class="grid-container margin-top-2">
+        <div class="grid-x grid-padding-x align-center">
+            <div class="cell large-10">
+                <table class="hover unstriped">
+                    <tbody>
+                        <tr>
+                            <td><img src="{{url_for('static', filename='img/clasicos/fernet.jpg')}}" alt="" style="width: 80px; border-radius: 10%;"></td>
+                            <td>Fernet con Coca Cola</td>
+                            <td><input type="number" min="1" value="22" class="input-group-field" placeholder="Qty" style="width: 50px;" step="1"></td>                    
+                            <td>$1.500</td>
+                            <td><button type="button" class="button alert" id="eliminar">X</button></td>
+                        </tr>
+                        <tr>
+                            <td><img src="{{url_for('static', filename='img/clasicos/campari.jpg')}}" alt="" style="width: 80px; border-radius: 10%;"></td>
+                            <td>Campari</td>
+                            <td><input type="number" min="1" value="22" class="input-group-field" placeholder="Qty" style="width: 50px;" step="1"></td>
+                            <td>$1.200</td>
+                            <td><button type="button" class="button alert" id="eliminar">X</button></td>
+                        </tr>
+                        <tr>
+                            <td><img src="{{url_for('static', filename='img/clasicos/mojito.jpg')}}" alt="" style="width: 80px; border-radius: 10%;"></td>
+                            <td>Mojito</td>
+                            <td><input type="number" min="1" value="22" class="input-group-field" placeholder="Qty" style="width: 50px;" step="1"></td>                    
+                            <td>$950</td>
+                            <td><button type="button" class="button alert" id="eliminar">X</button></td>
+                        </tr>
+                        <tr>
+                            <td><img src="{{url_for('static', filename='img/burgers/burger.jpg')}}" alt="" style="width: 80px; border-radius: 10%;"></td>
+                            <td>Hamburguesa Doble</td>
+                            <td><input type="number" min="1" value="22" class="input-group-field" placeholder="Qty" style="width: 50px;" step="1"></td>
+                            <td>$3.150</td>
+                            <td><button type="button" class="button alert" id="eliminar">X</button></td>
+                        </tr>
+                    </tbody>
+                </table>
 
-        <div class="table-responsive">
-            <table class="table table-dark">
-                <thead>
-                    <tr>
-                        <th scope="col">Titulo</th>
-                        <th scope="col">Precio</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="subtotal">
-                        <td>Subtotal</td>
-                        <td>$36.500</td>
-                    </tr>
-                    <tr class="descuento">
-                        <td>Efectivo (-10%)</td>
-                        <td>-10%</td>
-                    </tr>
-                    <tr class="total">
-                        <td>Total</td>
-                        <td>$32.850</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+                <table class="hover unstriped">
+                    <thead>
+                        <tr>
+                            <th>Titulo</th>
+                            <th>Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="subtotal">
+                            <td>Subtotal</td>
+                            <td>$36.500</td>
+                        </tr>
+                        <tr class="descuento">
+                            <td>Efectivo (-10%)</td>
+                            <td>-10%</td>
+                        </tr>
+                        <tr class="total">
+                            <td>Total</td>
+                            <td>$32.850</td>
+                        </tr>
+                    </tbody>
+                </table>
 
-        <div class="d-grid gap-2">
-            <button type="button" name="" id="pagar" class="btn btn-success">
-                Ir a pagar
-            </button>
+                <div class="grid-x grid-padding-x">
+                    <div class="cell">
+                        <button type="button" class="button success expanded" id="pagar">
+                            Ir a pagar
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 {% endblock %}

@@ -69,25 +69,27 @@
   {% endblock %}
 
   <!-- navbar bottom -->
-  <nav class="top-bar" style="background-color: rgb(0, 15, 14); position: fixed; bottom: 0; width: 100%;">
-    <div class="top-bar-left">
-      <ul class="menu">
-        <li><a href="#"><i class="fi-bell"></i></a></li>
-        <li><a href="#"><i class="fi-marker"></i></a></li>
-      </ul>
-    </div>
-    <div class="top-bar-right">
-      <ul class="menu">
-        <li><a href="/index"><i class="fi-home"></i></a></li>
-        <li><a href="/shop"><i class="fi-shopping-cart"></i><span class="badge">5</span></a></li>
-        <li>
-          <div class="dropdown-pane" id="userDropdown" data-dropdown data-auto-focus="true">
-            <a href="/" class="button">Cerrar Sesión</a>
-            <a href="/edit-profile" class="button">Modificar datos</a>
-          </div>
-        </li>
-      </ul>
-    </div>
+  <nav class="bottom-bar align-center" style="background-color: rgb(0, 15, 14); position: fixed; bottom: 0; left: 0; right: 0; z-index: 1000;">
+    <ul class="menu align-center expanded text-center" style="display: flex; justify-content: space-around;">
+      <li><a href="#"><i class="fas fa-bell fa-lg"></i></a></li>
+      <li><a href="#"><i class="fas fa-map-marker-alt fa-lg"></i></a></li>
+      <li><a href="/index"><i class="fas fa-home fa-lg"></i></a></li>
+      <li>
+        <a href="/shop" style="position: relative;">
+          <i class="fas fa-shopping-cart fa-lg"></i>
+          <span class="badge" style="position: absolute; top: -10px; right: -10px; background-color: #cc4b37; color: white; border-radius: 50%; padding: 0.25rem 0.5rem; font-size: 0.75rem;">5</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" data-toggle="user-dropdown"><i class="fas fa-user-circle fa-lg"></i></a>
+        <div class="dropdown-pane" id="user-dropdown" data-dropdown data-auto-focus="true" data-position="top" data-alignment="right">
+          <ul class="vertical menu">
+            <li><a href="/" class="button small expanded">Cerrar Sesión</a></li>
+            <li><a href="/edit-profile" class="button small expanded">Modificar datos</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
   </nav>
 
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>

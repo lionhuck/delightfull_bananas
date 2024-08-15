@@ -89,14 +89,14 @@ document.getElementById('formularioRegistro').addEventListener('submit', functio
 
     const nombre = document.getElementById('regNombre').value;
     const apellido = document.getElementById('regApellido').value;
-    const telefono = document.getElementById('regTelefono').value;
     const dni = document.getElementById('regDNI').value;
+    const telefono = document.getElementById('regTelefono').value;
     const email = document.getElementById('regEmail').value;
     const usuario = document.getElementById('regUsuario').value;
     const contrasena = document.getElementById('regContrasena').value;    
     const contrasenaRepeted = document.getElementById('regContrasenaRepeted').value;
 
-    if (validarRegistro(nombre, apellido, telefono, dni, email, usuario, contrasena,contrasenaRepeted)) {
+    if (validarRegistro(nombre, apellido, dni, telefono, email, usuario, contrasena,contrasenaRepeted)) {
         const nuevoUsuario = {
             id: generarId(),
             nombre,

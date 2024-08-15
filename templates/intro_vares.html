@@ -39,7 +39,7 @@
                         <img src="{{ url_for('static', filename='img/logo/Vares (1)-fotor-bg-remover-cortado.png') }}" alt="" height="40px">
                     </div>
                     <div class="modal-body">
-                        <form class="row">
+                        <form class="row" id="formularioInicioSesion">
                             <div class="col-12 pb-4">
                                 <input type="text" class="form-control" id="loginUsuario" placeholder="Nombre de usuario">
                             </div>
@@ -47,7 +47,7 @@
                                 <input type="password" class="form-control" id="loginContrasena" placeholder="Contraseña">
                             </div>
                             <div class="col-12 pb-4">
-                                <button type="submit" class="btn btn-dark"><a href="/index" style="text-decoration: none; color: inherit;">Iniciar sesión</a></button>
+                                <button type="submit" class="btn btn-dark">Iniciar sesión</a></button>
                             </div>
                         </form>
                     </div>
@@ -66,30 +66,30 @@
                         <img src="{{ url_for('static', filename='img/logo/Vares (1)-fotor-bg-remover-cortado.png') }}" alt="" height="40px">
                     </div>
                     <div class="modal-body">
-                        <form class="row">
+                        <form class="row" id="formularioRegistro">
                             <div class="col-6 pb-4">
-                                <input type="text" class="form-control" id="registerNombre" placeholder="Nombre">
+                                <input type="text" class="form-control" id="regNombre" placeholder="Nombre">
                             </div>
                             <div class="col-6 pb-4">
-                                <input type="text" class="form-control" id="registerApellido" placeholder="Apellido">
+                                <input type="text" class="form-control" id="regApellido" placeholder="Apellido">
                             </div>
                             <div class="col-6 pb-4">
-                                <input type="text" class="form-control" id="registerDNI" placeholder="DNI">
+                                <input type="text" class="form-control" id="regDNI" placeholder="DNI">
                             </div>
                             <div class="col-6 pb-4">
-                                <input type="text" class="form-control" id="registerCelular" placeholder="Celular">
+                                <input type="text" class="form-control" id="regTelefono" placeholder="Celular">
                             </div>
                             <div class="col-12 pb-4">
-                                <input type="email" class="form-control" id="registerEmail" placeholder="Email">
+                                <input type="email" class="form-control" id="regEmail" placeholder="Email">
                             </div>
                             <div class="col-12 pb-4">
-                                <input type="text" class="form-control" id="registerUsuario" placeholder="Nombre de usuario">
+                                <input type="text" class="form-control" id="regUsuario" placeholder="Nombre de usuario">
                             </div>
                             <div class="col-6 pb-4">
-                                <input type="password" class="form-control" id="registerContrasena" placeholder="Contraseña">
+                                <input type="password" class="form-control" id="regContrasena" placeholder="Contraseña">
                             </div>
                             <div class="col-6 pb-4">
-                                <input type="password" class="form-control" id="registerContrasenaRepetir" placeholder="Repetir Contraseña">
+                                <input type="password" class="form-control" id="regContrasenaRepeted" placeholder="Repetir Contraseña">
                             </div>
                             <div class="col-12 pb-4">
                                 <button type="submit" class="btn btn-dark">Registrarse</button>

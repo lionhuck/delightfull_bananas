@@ -5,1069 +5,1067 @@
 {% endblock %}
 
 {% block content %}
-<body>
-    <section id="atrevidos" class="card-section"> <!-- atrevidos -->
-        <div class="container py-4">
-            <div class="title-sections">
-                <h1 class="card-title">Atrevidos</h1>
-            </div>
-                <br>
-                <div class="card border-dark">
-                    <div class="row g-0">
-                        <div class="col-5" >
-                            <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/nuevos/chocokat.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
-                        </div>
-                        <div class="col-7">
-                            <div class="card-body d-grid">
-                                <h1 class="h5 card-title ">Chocokat</h1>
-                                <p class="card-text">Licor de chocolate, absolut de vainilla, licor de amaretto, leche y salsa de chocolate</p>
-                                <p>$5.200</p>
-                                <button class="btn btn-dark btn-sm" 
-                                    data-image="{{ url_for('static', filename='img/nuevos/chocokat.jpg') }}" 
-                                    onclick="addToCart('Chocokat', 5200, this.getAttribute('data-image'))">
-                                    Cargar al carrito
-                                </button>
 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="card border-dark my-2" >
-                    <div class="row g-0">
-                        <div class="col-5" >
-                            <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/nuevos/dolly_pop_cherry.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
-                        </div>
-                        <div class="col-7">
-                            <div class="card-body d-grid">
-                                <h1 class="h5 card-title">Dolly pop cherry</h1>
-                                <p class="card-text">Vodka, licor de cherry y frutilla</p>
-                                <p>$4.500</p>
-                                <button class="btn btn-dark btn-sm" 
-                                    data-image="{{ url_for('static', filename='img/nuevos/dolly_pop_cherry.jpg') }}" 
-                                    onclick="addToCart('Colly pop cherry', 4500, this.getAttribute('data-image'))">
-                                    Cargar al carrito
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-            <div class="card border-dark my-2" >
-                <div class="row g-0">
-                    <div class="col-5" >
-                        <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/nuevos/dolly_pop_uva.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="col-7">
-                        <div class="card-body d-grid">
-                            <h1 class="h5 card-title">Dolly pop uva</h1>
-                            <p class="card-text">Vodka, licor de violetas y cordial de uva</p>
-                            <p>$5.200</p>
-                            <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/nuevos/dolly_pop_uva.jpg') }}" 
-                            onclick="addToCart('Dolly pop uva', 5200, this.getAttribute('data-image'))">
-                                Cargar al carrito
-                            </button>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card border-dark my-2" >
-                <div class="row g-0">
-                    <div class="col-5" >
-                        <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/nuevos/gomitas.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="col-7">
-                        <div class="card-body d-grid">
-                            <h1 class="h5 card-title">Gomitas</h1>
-                            <p class="card-text">Granadina, Vodka, Blue Curacao y jugo de Naranja</p>
-                            <p>$5.200</p>
-                            <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/nuevos/gomitas.jpg') }}" 
-                            onclick="addToCart('Gomitas', 5200, this.getAttribute('data-image'))">
-                                Cargar al carrito
-                            </button>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card border-dark my-2" >
-                <div class="row g-0">
-                    <div class="col-5" >
-                        <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/nuevos/reina.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="col-7">
-                        <div class="card-body d-grid">
-                            <h1 class="h5 card-title">Reina</h1>
-                            <p class="card-text">Frutos Rojos, Ron Dorado y limón</p>
-                            <p>$5.200</p>
-                            <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/nuevos/reina.jpg') }}" 
-                            onclick="addToCart('Reina', 5200, this.getAttribute('data-image'))">
-                                Cargar al carrito
-                            </button>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>        
-    </section>  
-
-    <section id="autor" class="card-section"> <!-- autor -->
-        <div class="container py-4">
-            <div class="title-sections">
-                <h1 class="card-title">Autor</h1>
-            </div>
-                <br>
-                <div class="card border-dark" >
-                    <div class="row g-0">
-                        <div class="col-5" >
-                            <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/autor/bosque_sur.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
-                        </div>
-                        <div class="col-7">
-                            <div class="card-body d-grid">
-                                <h1 class="h5 card-title">Bosque sur</h1>
-                                <p class="card-text">Gin london dry, néctar de jengibre, limón, almibar, bitter angostura, cerveza y menta</p>
-                                <p>$4.800</p>
-                                <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/autor/bosque_sur.jpg') }}" 
-                                onclick="addToCart('Bosque sur', 4800, this.getAttribute('data-image'))">
-                                    Cargar al carrito
-                                </button>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="card border-dark my-2">
-                    <div class="row g-0">
-                        <div class="col-5">
-                            <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/autor/braavos_mule.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
-                        </div>
-                        <div class="col-7">
-                            <div class="card-body d-grid">
-                                <h1 class="h5 card-title">Braavos mule</h1>
-                                <p class="card-text">Ron dorado, cynar, reducción de frambuesa, limón y tuntura de cacao</p>
-                                <p>$5.200</p>
-                                <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/autor/braavos_mule.jpg') }}" 
-                                onclick="addToCart('Braavos mule', 5200, this.getAttribute('data-image'))">
-                                    Cargar al carrito
-                                </button>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-            <div class="card border-dark my-2">
-                <div class="row g-0">
-                    <div class="col-5">
-                        <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/autor/pentos_fix.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="col-7">
-                        <div class="card-body d-grid">
-                            <h1 class="h5 card-title">Pentos fix</h1>
-                            <p class="card-text">Sernova, licor de sauco, limón, almibar, tintura de hibiscus y damasco</p>
-                            <p>$4.800</p>
-                            <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/autor/pentos_fix.jpg') }}" 
-                            onclick="addToCart('Pentos fix', 4800, this.getAttribute('data-image'))">
-                                Cargar al carrito
-                            </button>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card border-dark my-2">
-                <div class="row g-0">
-                    <div class="col-5" >
-                        <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/autor/vermucito.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="col-7">
-                        <div class="card-body d-grid">
-                            <h1 class="h5 card-title">Vermucito</h1>
-                            <p class="card-text">Carpano Vermu, gin brighton, london dry, cordial de lima, soda de pera y perfume de lavanda</p>
-                            <p>$4.800</p>
-                            <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/autor/vermucito.jpg') }}" 
-                            onclick="addToCart('Vermucito', 4800, this.getAttribute('data-image'))">
-                                Cargar al carrito
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card border-dark my-2">
-                <div class="row g-0">
-                    <div class="col-5" >
-                        <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/autor/vintage.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="col-7">
-                        <div class="card-body d-grid">
-                            <h1 class="h5 card-title">Vintage</h1>
-                            <p class="card-text">Whisky americano, almibar, bitter de mango y pimineta negra, humo</p>
-                            <p>$5.200</p>
-                            <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/autor/vermucito.jpg') }}" 
-                            onclick="addToCart('Vermucito', 4800, this.getAttribute('data-image'))">
-                                Cargar al carrito
-                            </button>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>        
-    </section>  
-    
-    <section id="gin-tonic" class="card-section"> <!-- gin tonic -->
-        <div class="container py-4">
-            <div class="title-sections">
-                <h1 class="card-title">Gin tonic</h1>
-            </div>
-                <br>
-                <div class="card border-dark">
-                    <div class="row g-0">
-                        <div class="col-5" >
-                            <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/gin_tonic/gin_campamento.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
-                        </div>
-                        <div class="col-7">
-                            <div class="card-body d-grid">
-                                <h1 class="h5 card-title">Gin campamento</h1>
-                                <p class="card-text">Eucalipto y cacap tostado</p>
-                                <p>$5.200</p>
-                                <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/gin_tonic/gin_campamento.jpg') }}" 
-                                onclick="addToCart('Gin campamento', 5200, this.getAttribute('data-image'))">
-                                    Cargar al carrito
-                                </button>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="card border-dark my-2" >
-                    <div class="row g-0">
-                        <div class="col-5" >
-                            <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/gin_tonic/gin_jamaica.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
-                        </div>
-                        <div class="col-7">
-                            <div class="card-body d-grid">
-                                <h1 class="h5 card-title">Gin jamaica</h1>
-                                <p class="card-text">Albahaca e hibiscus</p>
-                                <p>$5.200</p>
-                                <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/gin_tonic/gin_jamaica.jpg') }}" 
-                                onclick="addToCart('Gin jamaica', 5200, this.getAttribute('data-image'))">
-                                    Cargar al carrito
-                                </button>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-            <div class="card border-dark my-2" >
-                <div class="row g-0">
-                    <div class="col-5" >
-                        <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/gin_tonic/gin_lunfardo.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="col-7">
-                        <div class="card-body d-grid">
-                            <h1 class="h5 card-title">Gin lunfardo</h1>
-                            <p class="card-text">Carpano vermu, cedrón y pomelo</p>
-                            <p>$5.200</p>
-                            <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/gin_tonic/gin_lunfardo.jpg') }}" 
-                            onclick="addToCart('Gin lunfardo', 5200, this.getAttribute('data-image'))">
-                                Cargar al carrito
-                            </button>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card border-dark my-2" >
-                <div class="row g-0">
-                    <div class="col-5" >
-                        <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/gin_tonic/gin_passion.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="col-7">
-                        <div class="card-body d-grid">
-                            <h1 class="h5 card-title">Gin passion</h1>
-                            <p class="card-text">Maracuyá y pimineta rosa</p>
-                            <p>$5.200</p>
-                            <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/gin_tonic/gin_passion.jpg') }}" 
-                            onclick="addToCart('Gin passion', 5200, this.getAttribute('data-image'))">
-                                Cargar al carrito
-                            </button>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
-            <div class="card border-dark my-2" >
-                <div class="row g-0">
-                    <div class="col-5" >
-                        <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/gin_tonic/gin_patagonico.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="col-7">
-                        <div class="card-body d-grid">
-                            <h1 class="h5 card-title">Gin patagónico</h1>
-                            <p class="card-text">Pera y vino Chardonnay</p>
-                            <p>$5.200</p>
-                            <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/gin_tonic/gin_patagonico.jpg') }}" 
-                            onclick="addToCart('Gin patagónico', 5200, this.getAttribute('data-image'))">
-                                Cargar al carrito
-                            </button>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card border-dark my-2" >
-                <div class="row g-0">
-                    <div class="col-5" >
-                        <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/gin_tonic/gin_ramos.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="col-7">
-                        <div class="card-body d-grid">
-                            <h1 class="h5 card-title">Gin ramos</h1>
-                            <p class="card-text">Frambuesa, menta y pimineta negra tostada</p>
-                            <p>$5.200</p>
-                            <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/gin_tonic/gin_ramos.jpg') }}" 
-                            onclick="addToCart('Gin ramos', 5200, this.getAttribute('data-image'))">
-                                Cargar al carrito
-                            </button>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card border-dark my-2" >
-                <div class="row g-0">
-                    <div class="col-5" >
-                        <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/gin_tonic/gin_tropical.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="col-7">
-                        <div class="card-body d-grid">
-                            <h1 class="h5 card-title">Gin tropical</h1>
-                            <p class="card-text">Lemograss y ananá</p>
-                            <p>$5.200</p>
-                            <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/gin_tonic/gin_tropical.jpg') }}" 
-                            onclick="addToCart('Gin tropical', 5200, this.getAttribute('data-image'))">
-                                Cargar al carrito
-                            </button>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card border-dark my-2" >
-                <div class="row g-0">
-                    <div class="col-5" >
-                        <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/gin_tonic/tronic_2.0.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="col-7">
-                        <div class="card-body d-grid">
-                            <h1 class="h5 card-title">Tronic 2.0</h1>
-                            <p class="card-text">Jengibre, pepino, menta y bitter</p>
-                            <p>$5.200</p>
-                            <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/gin_tonic/tronic_2.0.jpg') }}" 
-                            onclick="addToCart('Tronic 2.0', 5200, this.getAttribute('data-image'))">
-                                Cargar al carrito
-                            </button>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card border-dark my-2" >
-                <div class="row g-0">
-                    <div class="col-5" >
-                        <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/gin_tonic/gin_paff.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="col-7">
-                        <div class="card-body d-grid">
-                            <h1 class="h5 card-title">Gin paff</h1>
-                            <p class="card-text"></p>
-                            <p>$5.200</p>
-                            <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/gin_tonic/gin_paff.jpg') }}" 
-                            onclick="addToCart('Gin paff', 5200, this.getAttribute('data-image'))">
-                                Cargar al carrito
-                            </button>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card border-dark my-2" >
-                <div class="row g-0">
-                    <div class="col-5" >
-                        <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/gin_tonic/gin_paff_frutilla.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="col-7">
-                        <div class="card-body d-grid">
-                            <h1 class="h5 card-title">Gin paff frutilla</h1>
-                            <p class="card-text"></p>
-                            <p>$5.200</p>
-                            <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/gin_tonic/gin_paff_frutilla.jpg') }}" 
-                            onclick="addToCart('Gin paff frutilla', 5200, this.getAttribute('data-image'))">
-                                Cargar al carrito
-                            </button>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card border-dark my-2" >
-                <div class="row g-0">
-                    <div class="col-5" >
-                        <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/gin_tonic/gin_paff_uva.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="col-7">
-                        <div class="card-body d-grid">
-                            <h1 class="h5 card-title">Gin paff uva</h1>
-                            <p class="card-text"></p>
-                            <p>$5.200</p>
-                            <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/gin_tonic/gin_paff_uva.jpg') }}" 
-                            onclick="addToCart('Gin paff uva', 5200, this.getAttribute('data-image'))">
-                                Cargar al carrito
-                            </button>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
+<section id="atrevidos" class="card-section"> <!-- atrevidos -->
+    <div class="container py-4">
+        <div class="title-sections">
+            <h1 class="card-title">Atrevidos</h1>
         </div>
-    </section>
-
-    <section id="caipis" class="card-section"> <!-- caipis -->
-        <div class="container py-4">
-            <div class="title-sections">
-                <h1 class="card-title">Caipis</h1>
-            </div>
-                <br>
-                <div class="card border-dark" >
-                    <div class="row g-0">
-                        <div class="col-5" >
-                            <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/caipis/caipiberry.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
-                        </div>
-                        <div class="col-7">
-                            <div class="card-body d-grid">
-                                <h1 class="h5 card-title">Caipiberry</h1>
-                                <p class="card-text"></p>
-                                <p>$4.600</p>
-                                <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/caipis/caipiberry.jpg') }}" 
-                                onclick="addToCart('Caipiberry', 4600, this.getAttribute('data-image'))">
-                                    Cargar al carrito
-                                </button>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="card border-dark my-2">
-                    <div class="row g-0">
-                        <div class="col-5">
-                            <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/caipis/caipijagger.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
-                        </div>
-                        <div class="col-7">
-                            <div class="card-body d-grid">
-                                <h1 class="h5 card-title">Caipijagger</h1>
-                                <p class="card-text"></p>
-                                <p>$4.600</p>
-                                <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/caipis/caipijagger.jpg') }}" 
-                                onclick="addToCart('Caipijagger', 4600, this.getAttribute('data-image'))">
-                                    Cargar al carrito
-                                </button>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-            <div class="card border-dark my-2">
-                <div class="row g-0">
-                    <div class="col-5">
-                        <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/caipis/caipirinha.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="col-7">
-                        <div class="card-body d-grid">
-                            <h1 class="h5 card-title">Caipirinha</h1>
-                            <p class="card-text"></p>
-                            <p>$4.600</p>
-                            <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/caipis/caipirinha.jpg') }}" 
-                            onclick="addToCart('Caipirinha', 4600, this.getAttribute('data-image'))">
-                                Cargar al carrito
-                            </button>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card border-dark my-2">
-                <div class="row g-0">
-                    <div class="col-5" >
-                        <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/caipis/caipitropical.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="col-7">
-                        <div class="card-body d-grid">
-                            <h1 class="h5 card-title">Caipitropical</h1>
-                            <p class="card-text"></p>
-                            <p>$4.600</p>
-                            <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/caipis/caipitropical.jpg') }}" 
-                            onclick="addToCart('Caipitropical', 4600, this.getAttribute('data-image'))">
-                                Cargar al carrito
-                            </button>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>        
-    </section>
-
-    <section id="clasicos" class="card-section"> <!-- clasicos -->
-        <div class="container py-4">
-            <div class="title-sections">
-                <h1 class="card-title">Clásicos</h1>
-            </div>
-                <br>
-                <div class="card border-dark" >
-                    <div class="row g-0">
-                        <div class="col-5" >
-                            <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/clasicos/campari.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
-                        </div>
-                        <div class="col-7">
-                            <div class="card-body d-grid">
-                                <h1 class="h5 card-title">Campari</h1>
-                                <p class="card-text"></p>
-                                <p>$4.600</p>
-                                <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/clasicos/campari.jpg') }}" 
-                                onclick="addToCart('Campari', 4600, this.getAttribute('data-image'))">
-                                    Cargar al carrito
-                                </button>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="card border-dark my-2">
-                    <div class="row g-0">
-                        <div class="col-5">
-                            <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/clasicos/fernet.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
-                        </div>
-                        <div class="col-7">
-                            <div class="card-body d-grid">
-                                <h1 class="h5 card-title">Fernet branca</h1>
-                                <p class="card-text"></p>
-                                <p>$4.600</p>
-                                <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/clasicos/fernet.jpg') }}" 
-                                onclick="addToCart('Fernet branca', 4600, this.getAttribute('data-image'))">
-                                    Cargar al carrito
-                                </button>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-            <div class="card border-dark my-2">
-                <div class="row g-0">
-                    <div class="col-5">
-                        <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/clasicos/mojito.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="col-7">
-                        <div class="card-body d-grid">
-                            <h1 class="h5 card-title">Mojito</h1>
-                            <p class="card-text"></p>
-                            <p>$4.600</p>
-                            <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/clasicos/mojito.jpg') }}" 
-                            onclick="addToCart('Mojito', 4600, this.getAttribute('data-image'))">
-                                Cargar al carrito
-                            </button>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>    
-
-    <section id="spritz" class="card-section"> <!-- spritz -->
-        <div class="container py-4">
-            <div class="title-sections">
-                <h1 class="card-title">Spritz</h1>
-            </div>
-                <br>
-                <div class="card border-dark" >
-                    <div class="row g-0">
-                        <div class="col-5" >
-                            <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/spritz/spritz_n1.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
-                        </div>
-                        <div class="col-7">
-                            <div class="card-body d-grid">
-                                <h1 class="h5 card-title">Spritz n1</h1>
-                                <p class="card-text"></p>
-                                <p>$5.150</p>
-                                <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/spritz/spritz_n1.jpg') }}" 
-                                onclick="addToCart('Spritz n1', 5150, this.getAttribute('data-image'))">
-                                    Cargar al carrito
-                                </button>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="card border-dark my-2">
-                    <div class="row g-0">
-                        <div class="col-5">
-                            <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/spritz/spritz_n2.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
-                        </div>
-                        <div class="col-7">
-                            <div class="card-body d-grid">
-                                <h1 class="h5 card-title">Spritz n2</h1>
-                                <p class="card-text"></p>
-                                <p>$5.150</p>
-                                <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/spritz/spritz_n2.jpg') }}" 
-                                onclick="addToCart('Spritz n2', 5150, this.getAttribute('data-image'))">
-                                    Cargar al carrito
-                                </button>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-            <div class="card border-dark my-2">
-                <div class="row g-0">
-                    <div class="col-5">
-                        <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/spritz/spritz_n3.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="col-7">
-                        <div class="card-body d-grid">
-                            <h1 class="h5 card-title">Spritz n3</h1>
-                            <p class="card-text"></p>
-                            <p>$5.150</p>
-                            <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/spritz/spritz_n3.jpg') }}" 
-                            onclick="addToCart('Spritz n3', 5150, this.getAttribute('data-image'))">
-                                Cargar al carrito
-                            </button>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card border-dark my-2" >
-                <div class="row g-0">
-                    <div class="col-5" >
-                        <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/spritz/spritz_n4.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="col-7">
-                        <div class="card-body d-grid">
-                            <h1 class="h5 card-title">Spritz n4</h1>
-                            <p class="card-text"></p>
-                            <p>$5.150</p>
-                            <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/spritz/spritz_n4.jpg') }}" 
-                            onclick="addToCart('Spritz n4', 5150, this.getAttribute('data-image'))">
-                                Cargar al carrito
-                            </button>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="card border-dark my-2">
-                <div class="row g-0">
-                    <div class="col-5">
-                        <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/spritz/spritz_n5.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="col-7">
-                        <div class="card-body d-grid">
-                            <h1 class="h5 card-title">Spritz n5</h1>
-                            <p class="card-text"></p>
-                            <p>$5.150</p>
-                            <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/spritz/spritz_n5.jpg') }}" 
-                            onclick="addToCart('Spritz n5', 5150, this.getAttribute('data-image'))">
-                                Cargar al carrito
-                            </button>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
-            <div class="card border-dark my-2">
-                <div class="row g-0">
-                    <div class="col-5">
-                        <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/spritz/spritz_n6.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="col-7">
-                        <div class="card-body d-grid">
-                            <h1 class="h5 card-title">Spritz n6</h1>
-                            <p class="card-text"></p>
-                            <p>$5.150</p>
-                            <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/spritz/spritz_n6.jpg') }}" 
-                            onclick="addToCart('Spritz n6', 5150, this.getAttribute('data-image'))">
-                                Cargar al carrito
-                            </button>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>   
-    
-    <section id="birras" class="card-section"> <!-- birras -->
-        <div class="container py-4">
-            <div class="title-sections">
-                <h1 class="card-title">Birras</h1>
-            </div>
-                <br>
-                <div class="card border-dark" >
-                    <div class="row g-0">
-                        <div class="col-5" >
-                            <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/birras/coronas.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
-                        </div>
-                        <div class="col-7">
-                            <div class="card-body d-grid">
-                                <h1 class="h5 card-title">Corona</h1>
-                                <p class="card-text"></p>
-                                <p>$4.000</p>
-                                <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/birras/coronas.jpg') }}" 
-                                onclick="addToCart('Corona', 4000, this.getAttribute('data-image'))">
-                                    Cargar al carrito
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="card border-dark my-2">
-                    <div class="row g-0">
-                        <div class="col-5">
-                            <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/birras/heineken.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
-                        </div>
-                        <div class="col-7">
-                            <div class="card-body d-grid">
-                                <h1 class="h5 card-title">Heineken</h1>
-                                <p class="card-text"></p>
-                                <p>$4.000</p>
-                                <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/birras/heineken.jpg') }}" 
-                                onclick="addToCart('Heineken', 4000, this.getAttribute('data-image'))">
-                                    Cargar al carrito
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        </div>
-    </section>  
-    
-    <section id="burgers" class="card-section"> <!-- burguers -->
-        <div class="container py-4">
-            <div class="title-sections">
-                <h1 class="card-title">Burguers</h1>
-            </div>
             <br>
             <div class="card border-dark">
                 <div class="row g-0">
-                    <div class="col-5">
-                        <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/burgers/clasica.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
+                    <div class="col-5" >
+                        <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/nuevos/chocokat.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
                     </div>
                     <div class="col-7">
                         <div class="card-body d-grid">
-                            <h1 class="h5 card-title">Clásica</h1>
-                            <p class="card-text">Medallón x2, cheddar, lechuga, tomate, cebolla y salsa especial</p>
-                            <p>$9.000</p>
-                            <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/burgers/clasica.jpg') }}" 
-                            onclick="addToCart('Clásica', 9000, this.getAttribute('data-image'))">
-                                Cargar al carrito
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="card border-dark my-2">
-                <div class="row g-0">
-                    <div class="col-5">
-                        <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/burgers/argenta.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="col-7">
-                        <div class="card-body d-grid">
-                            <h1 class="h5 card-title">Argenta</h1>
-                            <p class="card-text">Medallón de carne 150gr, cheddar x2 milkaut, panceta, cebolla, rúcula y pepino</p>
-                            <p>$9.300</p>
-                            <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/burgers/argenta.jpg') }}" 
-                            onclick="addToCart('Argenta', 9300, this.getAttribute('data-image'))">
-                                Cargar al carrito
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="card border-dark my-2">
-                <div class="row g-0">
-                    <div class="col-5">
-                        <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/burgers/cheeseburger.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="col-7">
-                        <div class="card-body d-grid">
-                            <h1 class="h5 card-title">Cheeseburger</h1>
-                            <p class="card-text">Medallón de carne x2, cheddar x4 milkaut y panceta</p>
+                            <h1 class="h5 card-title ">Chocokat</h1>
+                            <p class="card-text">Licor de chocolate, absolut de vainilla, licor de amaretto, leche y salsa de chocolate</p>
                             <p>$5.200</p>
-                            <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/burgers/cheeseburger.jpg') }}" 
-                            onclick="addToCart('Cheeseburger', 5200, this.getAttribute('data-image'))">
+                            <button class="btn btn-dark btn-sm" 
+                                data-image="{{ url_for('static', filename='img/nuevos/chocokat.jpg') }}" 
+                                onclick="addToCart('Chocokat', 5200, this.getAttribute('data-image'))">
                                 Cargar al carrito
                             </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="card border-dark my-2">
-                <div class="row g-0">
-                    <div class="col-5">
-                        <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/burgers/mr_cheese.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="col-7">
-                        <div class="card-body d-grid">
-                            <h1 class="h5 card-title">Mr cheese</h1>
-                            <p class="card-text">Medallón de carne 150gr y cheddar x3 milkaut, pan de queso</p>
-                            <p>$9.400</p>
-                            <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/burgers/mr_cheese.jpg') }}" 
-                            onclick="addToCart('Mr cheese', 9400, this.getAttribute('data-image'))">
-                                Cargar al carrito
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="card border-dark my-2">
-                <div class="row g-0">
-                    <div class="col-5">
-                        <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/burgers/doble_mr_chesse.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="col-7">
-                        <div class="card-body d-grid">
-                            <h1 class="h5 card-title">Doble Mr cheese</h1>
-                            <p class="card-text">Medallón de carne x2 y cheddar x6 milkaut, pan de queso</p>
-                            <p>$10.500</p>
-                            <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/burgers/doble_mr_chesse.jpg') }}" 
-                            onclick="addToCart('Doble Mr cheese', 10500, this.getAttribute('data-image'))">
-                                Cargar al carrito
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="card border-dark my-2">
-                <div class="row g-0">
-                    <div class="col-5">
-                        <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/burgers/onion_burger.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="col-7">
-                        <div class="card-body d-grid">
-                            <h1 class="h5 card-title">Onion burger</h1>
-                            <p class="card-text">Barbacoa, lechuga, tomate, medallón x2, cheddar, panceta, pepinos, cebolla, pan premium</p>
-                            <p>$10.400</p>
-                            <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/burgers/onion_burger.jpg') }}" 
-                            onclick="addToCart('Onion burger', 10400, this.getAttribute('data-image'))">
-                                Cargar al carrito
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="card border-dark my-2">
-                <div class="row g-0">
-                    <div class="col-5">
-                        <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/burgers/american.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="col-7">
-                        <div class="card-body d-grid">
-                            <h1 class="h5 card-title">American</h1>
-                            <p class="card-text">Medallón de carne 150gr, cheddar x2 milkaut, panceta, huevo sellado y BBQ</p>
-                            <p>$10.000</p>
-                            <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/burgers/american.jpg') }}" 
-                            onclick="addToCart('American', 10000, this.getAttribute('data-image'))">
-                                Cargar al carrito
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="card border-dark my-2">
-                <div class="row g-0">
-                    <div class="col-5">
-                        <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/burgers/doble_american.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="col-7">
-                        <div class="card-body d-grid">
-                            <h1 class="h5 card-title">Doble American</h1>
-                            <p class="card-text">Medallón de carne x2, cheddar x4 milkaut, panceta, huevo sellado y BBQ</p>
-                            <p>$10.000</p>
-                            <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/burgers/doble_american.jpg') }}" 
-                            onclick="addToCart('Doble American', 10000, this.getAttribute('data-image'))">
-                                Cargar al carrito
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
             <div class="card border-dark my-2" >
                 <div class="row g-0">
                     <div class="col-5" >
-                        <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/burgers/pollo_crispy.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
+                        <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/nuevos/dolly_pop_cherry.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
                     </div>
                     <div class="col-7">
                         <div class="card-body d-grid">
-                            <h1 class="h5 card-title">Pollo Crispy</h1>
-                            <p class="card-text">Medallón de pollo, cheddar x2 milkaut, guacamole y lechuga</p>
-                            <p>$10.000</p>
-                            <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/burgers/pollo_crispy.jpg') }}" 
-                            onclick="addToCart('Pollo Crispy', 10000, this.getAttribute('data-image'))">
+                            <h1 class="h5 card-title">Dolly pop cherry</h1>
+                            <p class="card-text">Vodka, licor de cherry y frutilla</p>
+                            <p>$4.500</p>
+                            <button class="btn btn-dark btn-sm" 
+                                data-image="{{ url_for('static', filename='img/nuevos/dolly_pop_cherry.jpg') }}" 
+                                onclick="addToCart('Colly pop cherry', 4500, this.getAttribute('data-image'))">
                                 Cargar al carrito
                             </button>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="card border-dark my-2" >
-                <div class="row g-0">
-                    <div class="col-5" >
-                        <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/burgers/vegetaraina.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="col-7">
-                        <div class="card-body d-grid">
-                            <h1 class="h5 card-title">Vegetaraina</h1>
-                            <p class="card-text">Medallón de remolacha, lechuga, tomates cherry, wok de verduras, aros de cebolla y guacamole</p>
-                            <p>$9.000</p>
-                            <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/burgers/vegetaraina.jpg') }}" 
-                            onclick="addToCart('Vegetaraina', 9000, this.getAttribute('data-image'))">
-                                Cargar al carrito
-                            </button>
-                        </div>
-                    </div>
+        
+        <div class="card border-dark my-2" >
+            <div class="row g-0">
+                <div class="col-5" >
+                    <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/nuevos/dolly_pop_uva.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
                 </div>
-            </div>
-
-            <div class="card border-dark my-2" >
-                <div class="row g-0">
-                    <div class="col-5" >
-                        <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/burgers/mr_veggie.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="col-7">
-                        <div class="card-body d-grid">
-                            <h1 class="h5 card-title">Gin paff uva</h1>
-                            <p class="card-text">Medallón de lentejas, lechuga, guacamole, tomate y cebolla morada</p>
-                            <p>$5.200</p>
-                            <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/burgers/mr_veggie.jpg') }}" 
-                            onclick="addToCart('Mr Veggie', 5200, this.getAttribute('data-image'))">
-                                Cargar al carrito
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div> 
-        </div>
-    </section>
-
-    <section id="papas" class="card-section"> <!-- papas -->
-        <div class="container py-4">
-            <div class="title-sections">
-                <h1 class="card-title">Papas</h1>
-            </div>
-                <br>
-                <div class="card border-dark" >
-                    <div class="row g-0">
-                        <div class="col-5" >
-                            <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/papas/pa_simples.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
-                        </div>
-                        <div class="col-7">
-                            <div class="card-body d-grid">
-                                <h1 class="h5 card-title">Papas simples</h1>
-                                <p class="card-text">Porción de papas</p>
-                                <p>$9.000</p>
-                                <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/papas/pa_simples.jpg') }}" 
-                                onclick="addToCart('Papas Simples', 9000, this.getAttribute('data-image'))">
-                                    Cargar al carrito
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="card border-dark my-2">
-                    <div class="row g-0">
-                        <div class="col-5">
-                            <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/papas/pa_xxl.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
-                        </div>
-                        <div class="col-7">
-                            <div class="card-body d-grid">
-                                <h1 class="h5 card-title">Papas XXL</h1>
-                                <p class="card-text">Papas tamaño XXL, cheddar, panceta, verdeo y queso parmesano</p>
-                                <p>$17.000</p>
-                                <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/papas/pa_xxl.jpg') }}" 
-                                onclick="addToCart('Papas XXL', 17000, this.getAttribute('data-image'))">
-                                    Cargar al carrito
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-            <div class="card border-dark my-2">
-                <div class="row g-0">
-                    <div class="col-5">
-                        <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/papas/pa_xxl_eggs.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="col-7">
-                        <div class="card-body d-grid">
-                            <h1 class="h5 card-title">Papas XXL EGGS</h1>
-                            <p class="card-text">Papas tamaño XXL, cheddar, panceta, dos huevos y verdeo</p>
-                            <p>$18.000</p>
-                            <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/papas/pa_xxl_eggs.jpg') }}" 
-                            onclick="addToCart('Papas XXL EGGS', 18000, this.getAttribute('data-image'))">
-                                Cargar al carrito
-                            </button>        
-                        </div>
+                <div class="col-7">
+                    <div class="card-body d-grid">
+                        <h1 class="h5 card-title">Dolly pop uva</h1>
+                        <p class="card-text">Vodka, licor de violetas y cordial de uva</p>
+                        <p>$5.200</p>
+                        <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/nuevos/dolly_pop_uva.jpg') }}" 
+                        onclick="addToCart('Dolly pop uva', 5200, this.getAttribute('data-image'))">
+                            Cargar al carrito
+                        </button>
+                        
                     </div>
                 </div>
             </div>
         </div>
-    </section> 
 
-  <div class="my-5">
-    <br>
-  </div> 
+        <div class="card border-dark my-2" >
+            <div class="row g-0">
+                <div class="col-5" >
+                    <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/nuevos/gomitas.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
+                </div>
+                <div class="col-7">
+                    <div class="card-body d-grid">
+                        <h1 class="h5 card-title">Gomitas</h1>
+                        <p class="card-text">Granadina, Vodka, Blue Curacao y jugo de Naranja</p>
+                        <p>$5.200</p>
+                        <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/nuevos/gomitas.jpg') }}" 
+                        onclick="addToCart('Gomitas', 5200, this.getAttribute('data-image'))">
+                            Cargar al carrito
+                        </button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
 
-  <script src="{{ url_for('static', filename='javascript/script.js') }}"></script>
+        <div class="card border-dark my-2" >
+            <div class="row g-0">
+                <div class="col-5" >
+                    <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/nuevos/reina.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
+                </div>
+                <div class="col-7">
+                    <div class="card-body d-grid">
+                        <h1 class="h5 card-title">Reina</h1>
+                        <p class="card-text">Frutos Rojos, Ron Dorado y limón</p>
+                        <p>$5.200</p>
+                        <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/nuevos/reina.jpg') }}" 
+                        onclick="addToCart('Reina', 5200, this.getAttribute('data-image'))">
+                            Cargar al carrito
+                        </button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>        
+</section>  
 
-</body> 
+<section id="autor" class="card-section"> <!-- autor -->
+    <div class="container py-4">
+        <div class="title-sections">
+            <h1 class="card-title">Autor</h1>
+        </div>
+            <br>
+            <div class="card border-dark" >
+                <div class="row g-0">
+                    <div class="col-5" >
+                        <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/autor/bosque_sur.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="col-7">
+                        <div class="card-body d-grid">
+                            <h1 class="h5 card-title">Bosque sur</h1>
+                            <p class="card-text">Gin london dry, néctar de jengibre, limón, almibar, bitter angostura, cerveza y menta</p>
+                            <p>$4.800</p>
+                            <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/autor/bosque_sur.jpg') }}" 
+                            onclick="addToCart('Bosque sur', 4800, this.getAttribute('data-image'))">
+                                Cargar al carrito
+                            </button>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card border-dark my-2">
+                <div class="row g-0">
+                    <div class="col-5">
+                        <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/autor/braavos_mule.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="col-7">
+                        <div class="card-body d-grid">
+                            <h1 class="h5 card-title">Braavos mule</h1>
+                            <p class="card-text">Ron dorado, cynar, reducción de frambuesa, limón y tuntura de cacao</p>
+                            <p>$5.200</p>
+                            <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/autor/braavos_mule.jpg') }}" 
+                            onclick="addToCart('Braavos mule', 5200, this.getAttribute('data-image'))">
+                                Cargar al carrito
+                            </button>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        <div class="card border-dark my-2">
+            <div class="row g-0">
+                <div class="col-5">
+                    <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/autor/pentos_fix.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
+                </div>
+                <div class="col-7">
+                    <div class="card-body d-grid">
+                        <h1 class="h5 card-title">Pentos fix</h1>
+                        <p class="card-text">Sernova, licor de sauco, limón, almibar, tintura de hibiscus y damasco</p>
+                        <p>$4.800</p>
+                        <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/autor/pentos_fix.jpg') }}" 
+                        onclick="addToCart('Pentos fix', 4800, this.getAttribute('data-image'))">
+                            Cargar al carrito
+                        </button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card border-dark my-2">
+            <div class="row g-0">
+                <div class="col-5" >
+                    <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/autor/vermucito.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
+                </div>
+                <div class="col-7">
+                    <div class="card-body d-grid">
+                        <h1 class="h5 card-title">Vermucito</h1>
+                        <p class="card-text">Carpano Vermu, gin brighton, london dry, cordial de lima, soda de pera y perfume de lavanda</p>
+                        <p>$4.800</p>
+                        <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/autor/vermucito.jpg') }}" 
+                        onclick="addToCart('Vermucito', 4800, this.getAttribute('data-image'))">
+                            Cargar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card border-dark my-2">
+            <div class="row g-0">
+                <div class="col-5" >
+                    <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/autor/vintage.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
+                </div>
+                <div class="col-7">
+                    <div class="card-body d-grid">
+                        <h1 class="h5 card-title">Vintage</h1>
+                        <p class="card-text">Whisky americano, almibar, bitter de mango y pimineta negra, humo</p>
+                        <p>$5.200</p>
+                        <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/autor/vermucito.jpg') }}" 
+                        onclick="addToCart('Vermucito', 4800, this.getAttribute('data-image'))">
+                            Cargar al carrito
+                        </button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>        
+</section>  
+
+<section id="gin-tonic" class="card-section"> <!-- gin tonic -->
+    <div class="container py-4">
+        <div class="title-sections">
+            <h1 class="card-title">Gin tonic</h1>
+        </div>
+            <br>
+            <div class="card border-dark">
+                <div class="row g-0">
+                    <div class="col-5" >
+                        <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/gin_tonic/gin_campamento.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="col-7">
+                        <div class="card-body d-grid">
+                            <h1 class="h5 card-title">Gin campamento</h1>
+                            <p class="card-text">Eucalipto y cacap tostado</p>
+                            <p>$5.200</p>
+                            <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/gin_tonic/gin_campamento.jpg') }}" 
+                            onclick="addToCart('Gin campamento', 5200, this.getAttribute('data-image'))">
+                                Cargar al carrito
+                            </button>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card border-dark my-2" >
+                <div class="row g-0">
+                    <div class="col-5" >
+                        <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/gin_tonic/gin_jamaica.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="col-7">
+                        <div class="card-body d-grid">
+                            <h1 class="h5 card-title">Gin jamaica</h1>
+                            <p class="card-text">Albahaca e hibiscus</p>
+                            <p>$5.200</p>
+                            <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/gin_tonic/gin_jamaica.jpg') }}" 
+                            onclick="addToCart('Gin jamaica', 5200, this.getAttribute('data-image'))">
+                                Cargar al carrito
+                            </button>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        <div class="card border-dark my-2" >
+            <div class="row g-0">
+                <div class="col-5" >
+                    <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/gin_tonic/gin_lunfardo.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
+                </div>
+                <div class="col-7">
+                    <div class="card-body d-grid">
+                        <h1 class="h5 card-title">Gin lunfardo</h1>
+                        <p class="card-text">Carpano vermu, cedrón y pomelo</p>
+                        <p>$5.200</p>
+                        <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/gin_tonic/gin_lunfardo.jpg') }}" 
+                        onclick="addToCart('Gin lunfardo', 5200, this.getAttribute('data-image'))">
+                            Cargar al carrito
+                        </button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card border-dark my-2" >
+            <div class="row g-0">
+                <div class="col-5" >
+                    <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/gin_tonic/gin_passion.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
+                </div>
+                <div class="col-7">
+                    <div class="card-body d-grid">
+                        <h1 class="h5 card-title">Gin passion</h1>
+                        <p class="card-text">Maracuyá y pimineta rosa</p>
+                        <p>$5.200</p>
+                        <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/gin_tonic/gin_passion.jpg') }}" 
+                        onclick="addToCart('Gin passion', 5200, this.getAttribute('data-image'))">
+                            Cargar al carrito
+                        </button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card border-dark my-2" >
+            <div class="row g-0">
+                <div class="col-5" >
+                    <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/gin_tonic/gin_patagonico.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
+                </div>
+                <div class="col-7">
+                    <div class="card-body d-grid">
+                        <h1 class="h5 card-title">Gin patagónico</h1>
+                        <p class="card-text">Pera y vino Chardonnay</p>
+                        <p>$5.200</p>
+                        <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/gin_tonic/gin_patagonico.jpg') }}" 
+                        onclick="addToCart('Gin patagónico', 5200, this.getAttribute('data-image'))">
+                            Cargar al carrito
+                        </button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card border-dark my-2" >
+            <div class="row g-0">
+                <div class="col-5" >
+                    <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/gin_tonic/gin_ramos.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
+                </div>
+                <div class="col-7">
+                    <div class="card-body d-grid">
+                        <h1 class="h5 card-title">Gin ramos</h1>
+                        <p class="card-text">Frambuesa, menta y pimineta negra tostada</p>
+                        <p>$5.200</p>
+                        <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/gin_tonic/gin_ramos.jpg') }}" 
+                        onclick="addToCart('Gin ramos', 5200, this.getAttribute('data-image'))">
+                            Cargar al carrito
+                        </button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card border-dark my-2" >
+            <div class="row g-0">
+                <div class="col-5" >
+                    <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/gin_tonic/gin_tropical.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
+                </div>
+                <div class="col-7">
+                    <div class="card-body d-grid">
+                        <h1 class="h5 card-title">Gin tropical</h1>
+                        <p class="card-text">Lemograss y ananá</p>
+                        <p>$5.200</p>
+                        <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/gin_tonic/gin_tropical.jpg') }}" 
+                        onclick="addToCart('Gin tropical', 5200, this.getAttribute('data-image'))">
+                            Cargar al carrito
+                        </button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card border-dark my-2" >
+            <div class="row g-0">
+                <div class="col-5" >
+                    <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/gin_tonic/tronic_2.0.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
+                </div>
+                <div class="col-7">
+                    <div class="card-body d-grid">
+                        <h1 class="h5 card-title">Tronic 2.0</h1>
+                        <p class="card-text">Jengibre, pepino, menta y bitter</p>
+                        <p>$5.200</p>
+                        <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/gin_tonic/tronic_2.0.jpg') }}" 
+                        onclick="addToCart('Tronic 2.0', 5200, this.getAttribute('data-image'))">
+                            Cargar al carrito
+                        </button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card border-dark my-2" >
+            <div class="row g-0">
+                <div class="col-5" >
+                    <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/gin_tonic/gin_paff.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
+                </div>
+                <div class="col-7">
+                    <div class="card-body d-grid">
+                        <h1 class="h5 card-title">Gin paff</h1>
+                        <p class="card-text"></p>
+                        <p>$5.200</p>
+                        <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/gin_tonic/gin_paff.jpg') }}" 
+                        onclick="addToCart('Gin paff', 5200, this.getAttribute('data-image'))">
+                            Cargar al carrito
+                        </button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card border-dark my-2" >
+            <div class="row g-0">
+                <div class="col-5" >
+                    <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/gin_tonic/gin_paff_frutilla.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
+                </div>
+                <div class="col-7">
+                    <div class="card-body d-grid">
+                        <h1 class="h5 card-title">Gin paff frutilla</h1>
+                        <p class="card-text"></p>
+                        <p>$5.200</p>
+                        <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/gin_tonic/gin_paff_frutilla.jpg') }}" 
+                        onclick="addToCart('Gin paff frutilla', 5200, this.getAttribute('data-image'))">
+                            Cargar al carrito
+                        </button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card border-dark my-2" >
+            <div class="row g-0">
+                <div class="col-5" >
+                    <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/gin_tonic/gin_paff_uva.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
+                </div>
+                <div class="col-7">
+                    <div class="card-body d-grid">
+                        <h1 class="h5 card-title">Gin paff uva</h1>
+                        <p class="card-text"></p>
+                        <p>$5.200</p>
+                        <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/gin_tonic/gin_paff_uva.jpg') }}" 
+                        onclick="addToCart('Gin paff uva', 5200, this.getAttribute('data-image'))">
+                            Cargar al carrito
+                        </button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+<section id="caipis" class="card-section"> <!-- caipis -->
+    <div class="container py-4">
+        <div class="title-sections">
+            <h1 class="card-title">Caipis</h1>
+        </div>
+            <br>
+            <div class="card border-dark" >
+                <div class="row g-0">
+                    <div class="col-5" >
+                        <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/caipis/caipiberry.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="col-7">
+                        <div class="card-body d-grid">
+                            <h1 class="h5 card-title">Caipiberry</h1>
+                            <p class="card-text"></p>
+                            <p>$4.600</p>
+                            <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/caipis/caipiberry.jpg') }}" 
+                            onclick="addToCart('Caipiberry', 4600, this.getAttribute('data-image'))">
+                                Cargar al carrito
+                            </button>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card border-dark my-2">
+                <div class="row g-0">
+                    <div class="col-5">
+                        <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/caipis/caipijagger.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="col-7">
+                        <div class="card-body d-grid">
+                            <h1 class="h5 card-title">Caipijagger</h1>
+                            <p class="card-text"></p>
+                            <p>$4.600</p>
+                            <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/caipis/caipijagger.jpg') }}" 
+                            onclick="addToCart('Caipijagger', 4600, this.getAttribute('data-image'))">
+                                Cargar al carrito
+                            </button>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        <div class="card border-dark my-2">
+            <div class="row g-0">
+                <div class="col-5">
+                    <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/caipis/caipirinha.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
+                </div>
+                <div class="col-7">
+                    <div class="card-body d-grid">
+                        <h1 class="h5 card-title">Caipirinha</h1>
+                        <p class="card-text"></p>
+                        <p>$4.600</p>
+                        <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/caipis/caipirinha.jpg') }}" 
+                        onclick="addToCart('Caipirinha', 4600, this.getAttribute('data-image'))">
+                            Cargar al carrito
+                        </button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card border-dark my-2">
+            <div class="row g-0">
+                <div class="col-5" >
+                    <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/caipis/caipitropical.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
+                </div>
+                <div class="col-7">
+                    <div class="card-body d-grid">
+                        <h1 class="h5 card-title">Caipitropical</h1>
+                        <p class="card-text"></p>
+                        <p>$4.600</p>
+                        <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/caipis/caipitropical.jpg') }}" 
+                        onclick="addToCart('Caipitropical', 4600, this.getAttribute('data-image'))">
+                            Cargar al carrito
+                        </button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>        
+</section>
+
+<section id="clasicos" class="card-section"> <!-- clasicos -->
+    <div class="container py-4">
+        <div class="title-sections">
+            <h1 class="card-title">Clásicos</h1>
+        </div>
+            <br>
+            <div class="card border-dark" >
+                <div class="row g-0">
+                    <div class="col-5" >
+                        <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/clasicos/campari.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="col-7">
+                        <div class="card-body d-grid">
+                            <h1 class="h5 card-title">Campari</h1>
+                            <p class="card-text"></p>
+                            <p>$4.600</p>
+                            <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/clasicos/campari.jpg') }}" 
+                            onclick="addToCart('Campari', 4600, this.getAttribute('data-image'))">
+                                Cargar al carrito
+                            </button>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card border-dark my-2">
+                <div class="row g-0">
+                    <div class="col-5">
+                        <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/clasicos/fernet.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="col-7">
+                        <div class="card-body d-grid">
+                            <h1 class="h5 card-title">Fernet branca</h1>
+                            <p class="card-text"></p>
+                            <p>$4.600</p>
+                            <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/clasicos/fernet.jpg') }}" 
+                            onclick="addToCart('Fernet branca', 4600, this.getAttribute('data-image'))">
+                                Cargar al carrito
+                            </button>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        <div class="card border-dark my-2">
+            <div class="row g-0">
+                <div class="col-5">
+                    <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/clasicos/mojito.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
+                </div>
+                <div class="col-7">
+                    <div class="card-body d-grid">
+                        <h1 class="h5 card-title">Mojito</h1>
+                        <p class="card-text"></p>
+                        <p>$4.600</p>
+                        <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/clasicos/mojito.jpg') }}" 
+                        onclick="addToCart('Mojito', 4600, this.getAttribute('data-image'))">
+                            Cargar al carrito
+                        </button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>    
+
+<section id="spritz" class="card-section"> <!-- spritz -->
+    <div class="container py-4">
+        <div class="title-sections">
+            <h1 class="card-title">Spritz</h1>
+        </div>
+            <br>
+            <div class="card border-dark" >
+                <div class="row g-0">
+                    <div class="col-5" >
+                        <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/spritz/spritz_n1.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="col-7">
+                        <div class="card-body d-grid">
+                            <h1 class="h5 card-title">Spritz n1</h1>
+                            <p class="card-text"></p>
+                            <p>$5.150</p>
+                            <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/spritz/spritz_n1.jpg') }}" 
+                            onclick="addToCart('Spritz n1', 5150, this.getAttribute('data-image'))">
+                                Cargar al carrito
+                            </button>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card border-dark my-2">
+                <div class="row g-0">
+                    <div class="col-5">
+                        <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/spritz/spritz_n2.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="col-7">
+                        <div class="card-body d-grid">
+                            <h1 class="h5 card-title">Spritz n2</h1>
+                            <p class="card-text"></p>
+                            <p>$5.150</p>
+                            <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/spritz/spritz_n2.jpg') }}" 
+                            onclick="addToCart('Spritz n2', 5150, this.getAttribute('data-image'))">
+                                Cargar al carrito
+                            </button>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        <div class="card border-dark my-2">
+            <div class="row g-0">
+                <div class="col-5">
+                    <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/spritz/spritz_n3.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
+                </div>
+                <div class="col-7">
+                    <div class="card-body d-grid">
+                        <h1 class="h5 card-title">Spritz n3</h1>
+                        <p class="card-text"></p>
+                        <p>$5.150</p>
+                        <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/spritz/spritz_n3.jpg') }}" 
+                        onclick="addToCart('Spritz n3', 5150, this.getAttribute('data-image'))">
+                            Cargar al carrito
+                        </button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card border-dark my-2" >
+            <div class="row g-0">
+                <div class="col-5" >
+                    <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/spritz/spritz_n4.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
+                </div>
+                <div class="col-7">
+                    <div class="card-body d-grid">
+                        <h1 class="h5 card-title">Spritz n4</h1>
+                        <p class="card-text"></p>
+                        <p>$5.150</p>
+                        <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/spritz/spritz_n4.jpg') }}" 
+                        onclick="addToCart('Spritz n4', 5150, this.getAttribute('data-image'))">
+                            Cargar al carrito
+                        </button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card border-dark my-2">
+            <div class="row g-0">
+                <div class="col-5">
+                    <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/spritz/spritz_n5.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
+                </div>
+                <div class="col-7">
+                    <div class="card-body d-grid">
+                        <h1 class="h5 card-title">Spritz n5</h1>
+                        <p class="card-text"></p>
+                        <p>$5.150</p>
+                        <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/spritz/spritz_n5.jpg') }}" 
+                        onclick="addToCart('Spritz n5', 5150, this.getAttribute('data-image'))">
+                            Cargar al carrito
+                        </button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card border-dark my-2">
+            <div class="row g-0">
+                <div class="col-5">
+                    <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/spritz/spritz_n6.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
+                </div>
+                <div class="col-7">
+                    <div class="card-body d-grid">
+                        <h1 class="h5 card-title">Spritz n6</h1>
+                        <p class="card-text"></p>
+                        <p>$5.150</p>
+                        <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/spritz/spritz_n6.jpg') }}" 
+                        onclick="addToCart('Spritz n6', 5150, this.getAttribute('data-image'))">
+                            Cargar al carrito
+                        </button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>   
+
+<section id="birras" class="card-section"> <!-- birras -->
+    <div class="container py-4">
+        <div class="title-sections">
+            <h1 class="card-title">Birras</h1>
+        </div>
+            <br>
+            <div class="card border-dark" >
+                <div class="row g-0">
+                    <div class="col-5" >
+                        <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/birras/coronas.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="col-7">
+                        <div class="card-body d-grid">
+                            <h1 class="h5 card-title">Corona</h1>
+                            <p class="card-text"></p>
+                            <p>$4.000</p>
+                            <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/birras/coronas.jpg') }}" 
+                            onclick="addToCart('Corona', 4000, this.getAttribute('data-image'))">
+                                Cargar al carrito
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card border-dark my-2">
+                <div class="row g-0">
+                    <div class="col-5">
+                        <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/birras/heineken.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="col-7">
+                        <div class="card-body d-grid">
+                            <h1 class="h5 card-title">Heineken</h1>
+                            <p class="card-text"></p>
+                            <p>$4.000</p>
+                            <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/birras/heineken.jpg') }}" 
+                            onclick="addToCart('Heineken', 4000, this.getAttribute('data-image'))">
+                                Cargar al carrito
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</section>  
+
+<section id="burgers" class="card-section"> <!-- burguers -->
+    <div class="container py-4">
+        <div class="title-sections">
+            <h1 class="card-title">Burguers</h1>
+        </div>
+        <br>
+        <div class="card border-dark">
+            <div class="row g-0">
+                <div class="col-5">
+                    <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/burgers/clasica.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
+                </div>
+                <div class="col-7">
+                    <div class="card-body d-grid">
+                        <h1 class="h5 card-title">Clásica</h1>
+                        <p class="card-text">Medallón x2, cheddar, lechuga, tomate, cebolla y salsa especial</p>
+                        <p>$9.000</p>
+                        <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/burgers/clasica.jpg') }}" 
+                        onclick="addToCart('Clásica', 9000, this.getAttribute('data-image'))">
+                            Cargar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card border-dark my-2">
+            <div class="row g-0">
+                <div class="col-5">
+                    <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/burgers/argenta.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
+                </div>
+                <div class="col-7">
+                    <div class="card-body d-grid">
+                        <h1 class="h5 card-title">Argenta</h1>
+                        <p class="card-text">Medallón de carne 150gr, cheddar x2 milkaut, panceta, cebolla, rúcula y pepino</p>
+                        <p>$9.300</p>
+                        <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/burgers/argenta.jpg') }}" 
+                        onclick="addToCart('Argenta', 9300, this.getAttribute('data-image'))">
+                            Cargar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card border-dark my-2">
+            <div class="row g-0">
+                <div class="col-5">
+                    <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/burgers/cheeseburger.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
+                </div>
+                <div class="col-7">
+                    <div class="card-body d-grid">
+                        <h1 class="h5 card-title">Cheeseburger</h1>
+                        <p class="card-text">Medallón de carne x2, cheddar x4 milkaut y panceta</p>
+                        <p>$5.200</p>
+                        <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/burgers/cheeseburger.jpg') }}" 
+                        onclick="addToCart('Cheeseburger', 5200, this.getAttribute('data-image'))">
+                            Cargar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card border-dark my-2">
+            <div class="row g-0">
+                <div class="col-5">
+                    <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/burgers/mr_cheese.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
+                </div>
+                <div class="col-7">
+                    <div class="card-body d-grid">
+                        <h1 class="h5 card-title">Mr cheese</h1>
+                        <p class="card-text">Medallón de carne 150gr y cheddar x3 milkaut, pan de queso</p>
+                        <p>$9.400</p>
+                        <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/burgers/mr_cheese.jpg') }}" 
+                        onclick="addToCart('Mr cheese', 9400, this.getAttribute('data-image'))">
+                            Cargar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card border-dark my-2">
+            <div class="row g-0">
+                <div class="col-5">
+                    <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/burgers/doble_mr_chesse.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
+                </div>
+                <div class="col-7">
+                    <div class="card-body d-grid">
+                        <h1 class="h5 card-title">Doble Mr cheese</h1>
+                        <p class="card-text">Medallón de carne x2 y cheddar x6 milkaut, pan de queso</p>
+                        <p>$10.500</p>
+                        <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/burgers/doble_mr_chesse.jpg') }}" 
+                        onclick="addToCart('Doble Mr cheese', 10500, this.getAttribute('data-image'))">
+                            Cargar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card border-dark my-2">
+            <div class="row g-0">
+                <div class="col-5">
+                    <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/burgers/onion_burger.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
+                </div>
+                <div class="col-7">
+                    <div class="card-body d-grid">
+                        <h1 class="h5 card-title">Onion burger</h1>
+                        <p class="card-text">Barbacoa, lechuga, tomate, medallón x2, cheddar, panceta, pepinos, cebolla, pan premium</p>
+                        <p>$10.400</p>
+                        <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/burgers/onion_burger.jpg') }}" 
+                        onclick="addToCart('Onion burger', 10400, this.getAttribute('data-image'))">
+                            Cargar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card border-dark my-2">
+            <div class="row g-0">
+                <div class="col-5">
+                    <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/burgers/american.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
+                </div>
+                <div class="col-7">
+                    <div class="card-body d-grid">
+                        <h1 class="h5 card-title">American</h1>
+                        <p class="card-text">Medallón de carne 150gr, cheddar x2 milkaut, panceta, huevo sellado y BBQ</p>
+                        <p>$10.000</p>
+                        <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/burgers/american.jpg') }}" 
+                        onclick="addToCart('American', 10000, this.getAttribute('data-image'))">
+                            Cargar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card border-dark my-2">
+            <div class="row g-0">
+                <div class="col-5">
+                    <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/burgers/doble_american.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
+                </div>
+                <div class="col-7">
+                    <div class="card-body d-grid">
+                        <h1 class="h5 card-title">Doble American</h1>
+                        <p class="card-text">Medallón de carne x2, cheddar x4 milkaut, panceta, huevo sellado y BBQ</p>
+                        <p>$10.000</p>
+                        <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/burgers/doble_american.jpg') }}" 
+                        onclick="addToCart('Doble American', 10000, this.getAttribute('data-image'))">
+                            Cargar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card border-dark my-2" >
+            <div class="row g-0">
+                <div class="col-5" >
+                    <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/burgers/pollo_crispy.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
+                </div>
+                <div class="col-7">
+                    <div class="card-body d-grid">
+                        <h1 class="h5 card-title">Pollo Crispy</h1>
+                        <p class="card-text">Medallón de pollo, cheddar x2 milkaut, guacamole y lechuga</p>
+                        <p>$10.000</p>
+                        <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/burgers/pollo_crispy.jpg') }}" 
+                        onclick="addToCart('Pollo Crispy', 10000, this.getAttribute('data-image'))">
+                            Cargar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card border-dark my-2" >
+            <div class="row g-0">
+                <div class="col-5" >
+                    <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/burgers/vegetaraina.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
+                </div>
+                <div class="col-7">
+                    <div class="card-body d-grid">
+                        <h1 class="h5 card-title">Vegetaraina</h1>
+                        <p class="card-text">Medallón de remolacha, lechuga, tomates cherry, wok de verduras, aros de cebolla y guacamole</p>
+                        <p>$9.000</p>
+                        <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/burgers/vegetaraina.jpg') }}" 
+                        onclick="addToCart('Vegetaraina', 9000, this.getAttribute('data-image'))">
+                            Cargar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card border-dark my-2" >
+            <div class="row g-0">
+                <div class="col-5" >
+                    <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/burgers/mr_veggie.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
+                </div>
+                <div class="col-7">
+                    <div class="card-body d-grid">
+                        <h1 class="h5 card-title">Gin paff uva</h1>
+                        <p class="card-text">Medallón de lentejas, lechuga, guacamole, tomate y cebolla morada</p>
+                        <p>$5.200</p>
+                        <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/burgers/mr_veggie.jpg') }}" 
+                        onclick="addToCart('Mr Veggie', 5200, this.getAttribute('data-image'))">
+                            Cargar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+</section>
+
+<section id="papas" class="card-section"> <!-- papas -->
+    <div class="container py-4">
+        <div class="title-sections">
+            <h1 class="card-title">Papas</h1>
+        </div>
+            <br>
+            <div class="card border-dark" >
+                <div class="row g-0">
+                    <div class="col-5" >
+                        <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/papas/pa_simples.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="col-7">
+                        <div class="card-body d-grid">
+                            <h1 class="h5 card-title">Papas simples</h1>
+                            <p class="card-text">Porción de papas</p>
+                            <p>$9.000</p>
+                            <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/papas/pa_simples.jpg') }}" 
+                            onclick="addToCart('Papas Simples', 9000, this.getAttribute('data-image'))">
+                                Cargar al carrito
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card border-dark my-2">
+                <div class="row g-0">
+                    <div class="col-5">
+                        <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/papas/pa_xxl.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="col-7">
+                        <div class="card-body d-grid">
+                            <h1 class="h5 card-title">Papas XXL</h1>
+                            <p class="card-text">Papas tamaño XXL, cheddar, panceta, verdeo y queso parmesano</p>
+                            <p>$17.000</p>
+                            <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/papas/pa_xxl.jpg') }}" 
+                            onclick="addToCart('Papas XXL', 17000, this.getAttribute('data-image'))">
+                                Cargar al carrito
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        <div class="card border-dark my-2">
+            <div class="row g-0">
+                <div class="col-5">
+                    <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/papas/pa_xxl_eggs.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
+                </div>
+                <div class="col-7">
+                    <div class="card-body d-grid">
+                        <h1 class="h5 card-title">Papas XXL EGGS</h1>
+                        <p class="card-text">Papas tamaño XXL, cheddar, panceta, dos huevos y verdeo</p>
+                        <p>$18.000</p>
+                        <button class="btn btn-dark btn-sm" data-image="{{ url_for('static', filename='img/papas/pa_xxl_eggs.jpg') }}" 
+                        onclick="addToCart('Papas XXL EGGS', 18000, this.getAttribute('data-image'))">
+                            Cargar al carrito
+                        </button>        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> 
+
+<div class="my-5">
+<br>
+</div> 
+
+<script src="{{ url_for('static', filename='javascript/script.js') }}"></script>
 {% endblock %}

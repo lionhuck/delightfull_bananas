@@ -36,27 +36,6 @@ function resetContainer(container) {
     container.querySelector('.title-overlay').style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
 }
 
-
-
-//Login y Registro
-
-
-// otra opción:
-// agregar a cada .image-container: data-url="pagina1.html"
-
-// document.querySelectorAll('.image-container').forEach(container => {
-// container.addEventListener('click', function() {
-//     Espera un momento para que el efecto hover se complete
-//     setTimeout(() => {
-//     window.location.href = this.dataset.url;
-//     }, 200); // Ajusta el tiempo si es necesario
-// });
-// });
-
-
-
-
-
 // -------------Cerrar el nav una vez seleccionada la sección
 
 document.querySelectorAll('.offcanvas a').forEach(anchor => {
@@ -83,36 +62,43 @@ document.querySelectorAll('.offcanvas a').forEach(anchor => {
 });
 
 // -------------Agregar un producto al carrito
-function addToCart(productName, productPrice, productImage) {
-    const product = {
-        name: productName,
-        price: productPrice,
-        quantity: 1,
-        image: productImage // Agrega la ruta de la imagen
-    };
+function addToCart(name, price, image) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-    let cart = localStorage.getItem('cart');
-
-    if (cart) {
-        cart = JSON.parse(cart);
-        const existingProductIndex = cart.findIndex(item => item.name === productName);
-
-        if (existingProductIndex >= 0) {
-            cart[existingProductIndex].quantity += 1;
-        } else {
-            cart.push(product);
-        }
+    // Verifica si el producto ya está en el carrito
+    const existingProduct = cart.find(item => item.name === name);
+    if (existingProduct) {
+        existingProduct.quantity += 1;
     } else {
-        cart = [product];
+        cart.push({ name, price, image, quantity: 1 });
     }
 
+    // Guarda el carrito actualizado en localStorage
     localStorage.setItem('cart', JSON.stringify(cart));
-    alert(`${productName} se ha agregado al carrito.`);
-    loadCart(); // Cargar el carrito para actualizar la vista
+
+    // Actualiza el contador del carrito
+    updateCartCount();
 }
 
-// -------------Cargar el carrito
-// -------------Cargar el carrito
+function updateCartCount() {
+    const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    const cartCount = cartItems.reduce((total, item) => total + item.quantity, 0);
+    document.getElementById('cart-count').textContent = cartCount;
+}
+
+
+// Cargar el carrito y actualizar el contador cuando se cargue la página
+document.addEventListener('DOMContentLoaded', function() {
+    loadCart();
+    let cart = JSON.parse(localStorage.getItem('cart'));
+    if (cart) {
+        updateCartCount(cart.length);
+    } else {
+        updateCartCount(0);
+    }
+});
+
+// Función para cargar el carrito
 function loadCart() {
     const cartTableBody = document.querySelector('#cart-table tbody');
     const cart = localStorage.getItem('cart');
@@ -129,8 +115,7 @@ function loadCart() {
                 <td style="width: 50px;"><img src="${item.image}" alt="" style="width: 50px; border-radius: 10%;"></td>
                 <td style="max-width: 120px;">${item.name}</td>
                 <td style="white-space: nowrap;">
-                    <button type="button" class="btn btn-secondary btn-sm" style="font-size: 1.2rem;" 
-                        ${item.quantity <= 1 ? 'disabled' : `onclick="updateQuantity(${index}, ${item.quantity - 1})"`}>-</button>
+                    <button type="button" class="btn btn-secondary btn-sm" style="font-size: 1.2rem;" onclick="updateQuantity(${index}, ${item.quantity - 1})" ${item.quantity <= 1 ? 'disabled' : ''}>-</button>
                     <input type="number" min="1" value="${item.quantity}" class="form-control d-inline" style="width: 50px;" step="1" onchange="updateQuantity(${index}, this.value)">
                     <button type="button" class="btn btn-secondary btn-sm" style="font-size: 1.2rem;" onclick="updateQuantity(${index}, ${item.quantity + 1})">+</button>
                 </td>
@@ -142,25 +127,26 @@ function loadCart() {
         });
 
         updateTotals(cartItems);
+        updateCartCount(cartItems.length); // Asegurarse de actualizar el contador aquí también
     } else {
-        cartTableBody.innerHTML = '<tr><td colspan="5">El carrito está vacío.</td></tr>';
+        updateCartCount(0);
     }
 }
 
-// Actualizar cantidades en el carrito
+// Función para actualizar cantidades en el carrito
 function updateQuantity(index, newQuantity) {
     let cart = JSON.parse(localStorage.getItem('cart'));
 
-    if (newQuantity < 1) {
-        newQuantity = 1; // Asegurarse de que la cantidad no sea menor que 1
+    if (newQuantity <= 0) {
+        removeFromCart(index); // Si la cantidad es 0 o menor, eliminar el producto
+    } else {
+        cart[index].quantity = parseInt(newQuantity);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        loadCart(); // Recargar el carrito
     }
-
-    cart[index].quantity = parseInt(newQuantity);
-    localStorage.setItem('cart', JSON.stringify(cart));
-    loadCart(); // Recargar el carrito
 }
 
-// Eliminar producto del carrito
+// Función para eliminar producto del carrito
 function removeFromCart(index) {
     let cart = JSON.parse(localStorage.getItem('cart'));
     cart.splice(index, 1); // Eliminar el producto del array
@@ -168,7 +154,7 @@ function removeFromCart(index) {
     loadCart(); // Recargar el carrito
 }
 
-// Actualizar los totales de la compra
+// Función para actualizar los totales de la compra
 function updateTotals(cartItems) {
     let subtotal = 0;
     cartItems.forEach(item => {
@@ -182,9 +168,11 @@ function updateTotals(cartItems) {
     document.querySelector('.descuento td:nth-child(2)').textContent = `-$${discount.toFixed(2)}`;
     document.querySelector('.total td:nth-child(2)').textContent = `$${total.toFixed(2)}`;
 }
-
 // Cargar el carrito cuando el DOM esté listo
-document.addEventListener('DOMContentLoaded', loadCart);
+document.addEventListener('DOMContentLoaded', function() {
+    updateCartCount();
+});
+
 
 // -----------------
 

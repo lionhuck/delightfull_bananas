@@ -1,0 +1,41 @@
+{% extends "template_base.html" %}
+
+{% block title %}
+    TRAGOS Y MAS
+{% endblock %}
+
+{% block content %}
+<section id="atrevidos" class="card-section"> <!-- atrevidos -->
+    <div class="container py-4">
+        <div class="title-sections">
+            <h1 class="card-title">Atrevidos</h1>
+        </div>
+        <br>
+        <div class="card border-dark">
+            <div class="row g-0">
+                <div class="col-5">
+                    <img class="img-fluid rounded-start" src="{{url_for('static', filename='img/nuevos/chocokat.jpg')}}" alt="" style="height: 100%; object-fit: cover;">
+                </div>
+                <div class="col-7">
+                    <div class="card-body d-grid">
+                        <h1 class="h5 card-title">Chocokat</h1>
+                        <p class="card-text">Licor de chocolate, absolut de vainilla, licor de amaretto, leche y salsa de chocolate</p>
+                        <p>$5.200</p>
+                        <button class="btn btn-dark btn-sm" 
+                            data-image="{{ url_for('static', filename='img/nuevos/chocokat.jpg') }}" 
+                            onclick="addToCart('Chocokat', 5200, this.getAttribute('data-image'))">
+                            Cargar al carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> 
+
+<div class="my-5">
+    <br>
+</div> 
+
+<script src="{{ url_for('static', filename='javascript/script.js') }}"></script>
+{% endblock %}

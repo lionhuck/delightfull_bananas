@@ -213,3 +213,20 @@ i{
     padding-top: 10%;
     margin-top: -10%; 
 }
+
+
+
+/*------------------ carousel ----------------*/
+
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    display: none;
+    position: absolute;
+    width: 100%;
+    transition: opacity 1s ease-in-out;
+}

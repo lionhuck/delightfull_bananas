@@ -43,14 +43,22 @@
           <h3 class="h1">Burgers</h3>
         </div>
       </div>
-
-      <div class="col-12 py-5 image-container" data-url="#" style="background-color: rgb(0, 23, 22)">
-        <img src="{{ url_for('static', filename='img/game/drinks-on-us-5.avif') }}" alt="burgers" class="img-fluid">
-        <div class="title-static">
-          <h3 class="h1">Play the Game! </h3>
+      <div class="col-12 py-5 image-container" style="background-color: rgb(0, 23, 22)">
+          <div id="carousel" class="carousel">
+              <div class="carousel-slide">
+                  <img src="{{ url_for('static', filename='../static/img/caipis/caipirinha.jpg') }}" alt="slide1" class="img-fluid">
+              </div>
+              <div class="carousel-slide">
+                  <img src="{{ url_for('static', filename='../static/img/birras/banner.jpg') }}" alt="slide2" class="img-fluid">
+              </div>
+              <div class="carousel-slide">
+                  <img src="{{ url_for('static', filename='img/papas/pa_pentos.jpg') }}" alt="slide3" class="img-fluid">
+              </div>
+          </div>
+          <div class="title-static">
+            <h3 class="h1">Play the Game!</h3>
+          </div>
         </div>
-      </div>
-
       <div class="col-6 pb-2 pr-1 image-container" data-url="/cards#caipis" style="background-color: rgb(0, 23, 22)">
         <div class="image-wrapper rounded-3">
           <img src="{{ url_for('static', filename='img/caipis/caipirinha.jpg') }}" alt="caipis" class="img-fluid">

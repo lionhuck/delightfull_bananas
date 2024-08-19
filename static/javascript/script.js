@@ -53,6 +53,30 @@ function resetContainer(container) {
 // });
 // });
 
+// -------------\Script para el carousel 
+let currentSlide = 0;
+const slideInterval = 3000; // Tiempo en milisegundos entre cada imagen
+
+function showSlide(index) {
+    const slides = document.querySelectorAll('.carousel-slide');
+    slides.forEach((slide, i) => {
+        slide.style.display = i === index ? 'block' : 'none';
+    });
+}
+
+function moveSlide() {
+    const slides = document.querySelectorAll('.carousel-slide');
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+}
+
+// Cambio automático de fotos
+setInterval(moveSlide, slideInterval);
+
+// Mostrar la primera imagen al cargar la página
+showSlide(currentSlide);
+
+
 
 
 

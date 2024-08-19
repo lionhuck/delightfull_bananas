@@ -219,7 +219,7 @@ document.getElementById('formularioInicioSesion').addEventListener('submit', fun
 
     if (usuarioEncontrado) {
         sessionStorage.setItem('usuarioActual', JSON.stringify({ usuario }));
-        alert('Inicio de sesión exitoso.');
+        // alert('Inicio de sesión exitoso.');
         document.getElementById('formularioInicioSesion').reset();
         window.location.href = '/index';
     } else {

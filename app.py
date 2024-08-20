@@ -20,19 +20,6 @@ def index():
 def cards():
     return render_template('cards_vares.html')
 
-
-@app.route('/login')
-def login():
-    return render_template(
-        'login_vares.html',
-    )
-    
-@app.route('/signin')
-def signin():
-    return render_template(
-        'signin_vares.html',
-    )    
-    
 @app.route('/shop')
 def shop():
     return render_template(

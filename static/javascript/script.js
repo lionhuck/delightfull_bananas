@@ -83,7 +83,15 @@ function addToCart(name, price, image) {
 function updateCartCount() {
     const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
     const cartCount = cartItems.reduce((total, item) => total + item.quantity, 0);
-    document.getElementById('cart-count').textContent = cartCount;
+
+    const cartCountElement = document.getElementById('cart-count'); // Asegúrate de que el elemento con el id 'cart-count' exista
+
+    if (cartCount > 0) {
+        cartCountElement.textContent = cartCount; // Muestra el número total de productos
+        cartCountElement.style.display = 'inline'; // Asegúrate de que el contador sea visible
+    } else {
+        cartCountElement.style.display = 'none'; // Oculta el contador cuando el carrito esté vacío
+    }
 }
 
 
@@ -102,48 +110,40 @@ document.addEventListener('DOMContentLoaded', function() {
 function loadCart() {
     const cartTableBody = document.querySelector('#cart-table tbody');
     const cart = localStorage.getItem('cart');
+    const cartItems = cart ? JSON.parse(cart) : [];
 
-    if (cart) {
-        const cartItems = JSON.parse(cart);
-        cartTableBody.innerHTML = ''; // Limpiar la tabla antes de cargar
+    cartTableBody.innerHTML = ''; // Limpiar la tabla antes de cargar
 
-        cartItems.forEach((item, index) => {
-            const row = document.createElement('tr');
-            row.classList.add('table-dark');
+    cartItems.forEach((item, index) => {
+        const row = document.createElement('tr');
+        row.classList.add('table-dark');
 
-            row.innerHTML = `
-                <td style="width: 50px;"><img src="${item.image}" alt="" style="width: 50px; border-radius: 10%;"></td>
-                <td style="max-width: 120px;">${item.name}</td>
-                <td style="white-space: nowrap;">
-                    <button type="button" class="btn btn-secondary btn-sm" style="font-size: 1.2rem;" onclick="updateQuantity(${index}, ${item.quantity - 1})" ${item.quantity <= 1 ? 'disabled' : ''}>-</button>
-                    <input type="number" min="1" value="${item.quantity}" class="form-control d-inline" style="width: 50px;" step="1" onchange="updateQuantity(${index}, this.value)">
-                    <button type="button" class="btn btn-secondary btn-sm" style="font-size: 1.2rem;" onclick="updateQuantity(${index}, ${item.quantity + 1})">+</button>
-                </td>
-                <td style="width: 70px;">$${item.price * item.quantity}</td>
-                <td style="width: 40px;"><button type="button" class="btn btn-danger btn-sm" style="font-size: 1.5rem;" onclick="removeFromCart(${index})">X</button></td>
-            `;
+        row.innerHTML = `
+            <td style="width: 50px;"><img src="${item.image}" alt="" style="width: 50px; border-radius: 10%;"></td>
+            <td style="max-width: 120px;">${item.name}</td>
+            <td style="white-space: nowrap;">
+                <button type="button" class="btn btn-secondary btn-sm" style="font-size: 1.2rem;" onclick="updateQuantity(${index}, ${item.quantity - 1})" ${item.quantity <= 1 ? 'disabled' : ''}>-</button>
+                <input type="number" min="1" value="${item.quantity}" class="form-control d-inline" style="width: 50px;" step="1" onchange="updateQuantity(${index}, this.value)">
+                <button type="button" class="btn btn-secondary btn-sm" style="font-size: 1.2rem;" onclick="updateQuantity(${index}, ${item.quantity + 1})">+</button>
+            </td>
+            <td style="width: 70px;">$${item.price * item.quantity}</td>
+            <td style="width: 40px;"><button type="button" class="btn btn-danger btn-sm" style="font-size: 1.5rem;" onclick="removeFromCart(${index})">X</button></td>
+        `;
 
-            cartTableBody.appendChild(row);
-        });
+        cartTableBody.appendChild(row);
+    });
 
-        updateTotals(cartItems);
-        updateCartCount(cartItems.length); // Asegurarse de actualizar el contador aquí también
-    } else {
-        updateCartCount(0);
-    }
+    updateTotals(cartItems); // Actualizar los totales del carrito
+    updateCartCount(cartItems.length); // Asegurarse de actualizar el contador aquí también
 }
 
 // Función para actualizar cantidades en el carrito
 function updateQuantity(index, newQuantity) {
     let cart = JSON.parse(localStorage.getItem('cart'));
 
-    if (newQuantity <= 0) {
-        removeFromCart(index); // Si la cantidad es 0 o menor, eliminar el producto
-    } else {
-        cart[index].quantity = parseInt(newQuantity);
-        localStorage.setItem('cart', JSON.stringify(cart));
-        loadCart(); // Recargar el carrito
-    }
+    cart[index].quantity = parseInt(newQuantity);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    loadCart(); // Recargar el carrito
 }
 
 // Función para eliminar producto del carrito
@@ -155,19 +155,36 @@ function removeFromCart(index) {
 }
 
 // Función para actualizar los totales de la compra
-function updateTotals(cartItems) {
-    let subtotal = 0;
+function updateTotals() {
+    let cart = localStorage.getItem('cart');
+    const cartItems = cart ? JSON.parse(cart) : [];
+    
+    let total = 0;
+
     cartItems.forEach(item => {
-        subtotal += item.price * item.quantity;
+        total += item.price * item.quantity;
     });
 
-    const discount = subtotal * 0.10; // Descuento del 10%
-    const total = subtotal - discount;
+    // const discount = subtotal * 0.10; // 10% descuento en efectivo
+    // cconst total = subtotal; // - discount;
 
-    document.querySelector('.subtotal td:nth-child(2)').textContent = `$${subtotal}`;
-    document.querySelector('.descuento td:nth-child(2)').textContent = `-$${discount.toFixed(2)}`;
-    document.querySelector('.total td:nth-child(2)').textContent = `$${total.toFixed(2)}`;
+    // cconst subtotalElement = document.querySelector('.subtotal td:nth-child(2)');
+    // const discountElement = document.querySelector('.descuento td:nth-child(2)');
+    const totalElement = document.querySelector('.total td:nth-child(2)');
+    const pagarButton = document.getElementById('pagar');
+
+    // csubtotalElement.textContent = `$${subtotal.toFixed(2)}`;
+    // discountElement.textContent = `-$${discount.toFixed(2)}`;
+    totalElement.textContent = `$${total.toFixed(2)}`;
+
+    // Desactivar el botón si el total es 0
+    if (total <= 0) {
+        pagarButton.setAttribute('disabled', 'disabled');
+    } else {
+        pagarButton.removeAttribute('disabled');
+    }
 }
+
 // Cargar el carrito cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', function() {
     updateCartCount();

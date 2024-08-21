@@ -50,6 +50,12 @@
                                 <button type="submit" class="btn btn-dark">Iniciar sesión</a></button>
                             </div>
                         </form>
+
+                        <div class="modal-footer text-white justify-content-evenly">
+                            ¿Olvidaste tu contraseña? <a href="#" data-bs-toggle="modal" data-bs-target="#recuperarContrasenaModal" data-bs-dismiss="modal">Recuperar contraseña</a>
+                        </div>
+
+
                     </div>
                     <div class="modal-footer text-white justify-content-evenly">
                         ¿Todavía no tienes tu cuenta Vares? <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-dismiss="modal">Regístrate</a>
@@ -103,6 +109,34 @@
             </div>
         </div>
     </div>
+
+
+    <!-- Modal de Recuperar Contraseña -->
+    <div class="modal fade" id="recuperarContrasenaModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered"> 
+            <div class="modal-content">
+                <div class="modal-header d-flex justify-content-center">
+                    <img src="{{ url_for('static', filename='img/logo/Vares (1)-fotor-bg-remover-cortado.png') }}" alt="" height="40px">
+                </div>
+                <div class="modal-body">
+                    <form class="row" id="formularioRecuperarContrasena">
+                        <div class="col-12 pb-4">
+                            <input type="text" class="form-control" id="recEmail" placeholder="Ingrese su mail">
+                        </div>
+                        <div class="col-12 pb-4">
+                            <input type="password" class="form-control" id="recDni" placeholder="Ingrese su documento">
+                        </div>
+                        <div class="col-12 pb-4">
+                            <button type="submit" class="btn btn-dark">Recuperar</a></button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer text-white justify-content-evenly"><a href="/" data-bs-toggle="modal"data-bs-dismiss="modal">Exit back</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 

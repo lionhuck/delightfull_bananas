@@ -222,6 +222,7 @@ document.getElementById('formularioRegistro').addEventListener('submit', functio
         localStorage.setItem('usuarios', JSON.stringify(usuarios));
         alert('Usuario registrado exitosamente.');
         document.getElementById('formularioRegistro').reset();
+        window.location.href = '/index';
     }
 });
 
@@ -244,24 +245,29 @@ document.getElementById('formularioInicioSesion').addEventListener('submit', fun
     }
 });
 
-const validarRegistro = (nombre, apellido, telefono, direccion, dni, usuario, contrasena) => {
+const validarRegistro = (nombre,apellido,telefono,dni,email,usuario,contrasena,contrasenaRepeted) => {
     if (!usuario || usuario.length < 5) {
         alert('El nombre de usuario debe tener al menos 5 caracteres.');
         return false;
     }
 
-    const contrasenaRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{9,}$/;
+    const contrasenaRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{7,}$/;
     if (!contrasenaRegex.test(contrasena)) {
-        alert('La contraseña debe tener al menos 9 caracteres, incluyendo letras y números.');
+        alert('La contraseña debe tener al menos 7 caracteres, incluyendo letras y números.');
         return false;
     }
 
-    if (!nombre || !apellido || !telefono || !direccion || !dni) {
+    if (!nombre || !apellido || !telefono || !dni || !email ) {
         alert('Por favor, completa todos los campos.');
+        return false;
+    }
+    if (contrasena !== contrasenaRepeted) {
+        alert('Las contraseñas no coinciden');
         return false;
     }
 
     return true;
+
 }
 
 function generarId() {
@@ -271,6 +277,38 @@ function generarId() {
     return id;
 }
 
+
+
+// Codigo para recuperar contraseña
+
+document.getElementById('formularioRecuperarContrasena').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const recEmail = document.getElementById('recEmail').value;
+    const recDni = document.getElementById('recDni').value;
+
+    let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+
+    const usuarioEncontrado = usuarios.find(usuario => usuario.email === recEmail && usuario.dni === recDni);
+
+    if (usuarioEncontrado) {
+        alert(`Su contraseña es: ${usuarioEncontrado.contrasena}`);
+        window.location.href = '/?showLoginModal=true';
+    } else {
+        alert('El correo electrónico o el documento no coinciden con ningún usuario registrado.');
+    }
+});
+
+//Este codigo hace que javascript tenga la ubicacion del modal login una vez recuperaste la contraseñaaaaaa
+window.addEventListener('DOMContentLoaded', function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const showLoginModal = urlParams.get('showLoginModal');
+
+    if (showLoginModal === 'true') {
+        const loginModal = new bootstrap.Modal(document.getElementById('loginModal'));
+        loginModal.show();
+    }
+});
 
 
 

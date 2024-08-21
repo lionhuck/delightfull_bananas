@@ -159,22 +159,22 @@ function updateTotals() {
     let cart = localStorage.getItem('cart');
     const cartItems = cart ? JSON.parse(cart) : [];
     
-    let total = 0;
+    let subtotal = 0;
 
     cartItems.forEach(item => {
-        total += item.price * item.quantity;
+        subtotal += item.price * item.quantity;
     });
 
-    // const discount = subtotal * 0.10; // 10% descuento en efectivo
-    // cconst total = subtotal; // - discount;
+    const discount = subtotal * 0.10; // 10% descuento en efectivo
+    const total = subtotal - discount;
 
-    // cconst subtotalElement = document.querySelector('.subtotal td:nth-child(2)');
-    // const discountElement = document.querySelector('.descuento td:nth-child(2)');
+    const subtotalElement = document.querySelector('.subtotal td:nth-child(2)');
+    const discountElement = document.querySelector('.descuento td:nth-child(2)');
     const totalElement = document.querySelector('.total td:nth-child(2)');
     const pagarButton = document.getElementById('pagar');
 
-    // csubtotalElement.textContent = `$${subtotal.toFixed(2)}`;
-    // discountElement.textContent = `-$${discount.toFixed(2)}`;
+    subtotalElement.textContent = `$${subtotal.toFixed(2)}`;
+    discountElement.textContent = `-$${discount.toFixed(2)}`;
     totalElement.textContent = `$${total.toFixed(2)}`;
 
     // Desactivar el botón si el total es 0
@@ -185,9 +185,83 @@ function updateTotals() {
     }
 }
 
-// Cargar el carrito cuando el DOM esté listo
+// Cargar el carrito cuando el DOM esté listo 
 document.addEventListener('DOMContentLoaded', function() {
     updateCartCount();
+// Esto sirve para que muestre la cantidad de productos en el icono del carrito en los otros templates)   
+});
+
+// Función para cargar los detalles de la compra en un Storage diferente
+function loadPurchaseDetails() {
+
+    // Obtenemos los datos del carrito desde localStorage
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // Guardar los datos del carrito en una clave diferente para futuros usos
+    localStorage.setItem('saved_cart', JSON.stringify(cart));
+
+}
+
+function showSavedCart() {
+    // Seleccionamos los elementos donde vamos a mostrar los datos
+    const savedTableBody = document.querySelector("#saved-cart-table tbody");
+    const savedTotalElement = document.querySelector(".saved-total td:nth-child(2)");
+
+    // Obtenemos los datos guardados desde localStorage
+    const savedCart = JSON.parse(localStorage.getItem('saved_cart')) || [];
+    let total = 0;
+
+    // Iteramos sobre los productos y los agregamos a la tabla
+    savedCart.forEach(item => {
+        const row = document.createElement("tr");
+
+        // Creamos las celdas para el título, cantidad, y el precio
+        const titleCell = document.createElement("td");
+        titleCell.textContent = item.name; // Nombre del producto
+
+        const quantityCell = document.createElement("td");
+        quantityCell.textContent = `${item.quantity}`; // Cantidad de productos
+
+        const priceCell = document.createElement("td");
+        priceCell.textContent = `$${item.price * item.quantity}`; // Precio total por producto (precio * cantidad)
+        priceCell.classList.add("text-end");
+
+        // Agregamos las celdas a la fila
+        row.appendChild(titleCell);
+        row.appendChild(quantityCell);
+        row.appendChild(priceCell);
+
+        // Agregamos la fila a la tabla
+        savedTableBody.appendChild(row);
+
+        // Actualizamos el total (precio por cantidad)
+        total += parseFloat(item.price) * item.quantity;
+    });
+
+    // Mostramos el total
+    savedTotalElement.textContent = `$${total.toFixed(2)}`;
+    
+}
+
+// Cargar el carrito y el contador cuando el DOM esté listo
+document.addEventListener('DOMContentLoaded', function() {
+    if (document.querySelector('#cart-table')) {
+        loadCart();
+    }
+
+    if (document.querySelector("#saved-cart-table")) {
+        showSavedCart();
+    }
+
+    updateCartCount();
+});
+
+// Función para vaciar el carrito al hacer clic en el botón "Ir a pagar"
+document.getElementById('pagar')?.addEventListener('click', function() {
+    loadPurchaseDetails(); // Guardar los detalles del carrito
+    localStorage.removeItem('cart'); // Vaciar el carrito actual
+    loadCart(); // Recargar el carrito (debe estar vacío)
+    updateCartCount(0); // Actualizar el contador del carrito
 });
 
 

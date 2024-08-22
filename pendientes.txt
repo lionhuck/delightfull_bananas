@@ -4,3 +4,4 @@ OK # Boton de ubicacion que te permita enviar la ubicacion por whatsapp = Gonzal
 # Hola USER!! debe traer el nombre del usuario que esta conectado. = Leon
 OK # Agregar una validacion para el repetir contraseña = Leon -- DONE
 OK # Carrousel donde dice PlayTheGame! = Gonzalo 
+# Si el carrito está vacio mostrar mensaje que incentive la compra de productos y muestre un a hacia index

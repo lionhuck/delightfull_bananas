@@ -1,6 +1,6 @@
 OK # Boton de ubicacion que te permita enviar la ubicacion por whatsapp = Gonzalo 
-# Que cuando se precione el boton de pagar en el template de shop, en un nuevo template de mis compras te aparezcan los productos comprados. (En un label agregado del User) = Pablo
-# Hacer el template de modificar datos. = Leon
+# Que cuando se precione el boton de pagar en el template de shop, en un nuevo template de mis compras te aparezcan los productos comprados. (En un label agregado del User) = Pablo FALTA TOTAL
+# Hacer el template de modificar datos. = Leon PENDIENTE 
 # Hola USER!! debe traer el nombre del usuario que esta conectado. = Leon
-# Agregar una validacion para el repetir contraseña = Leon -- DONE
+OK # Agregar una validacion para el repetir contraseña = Leon -- DONE
 OK # Carrousel donde dice PlayTheGame! = Gonzalo 

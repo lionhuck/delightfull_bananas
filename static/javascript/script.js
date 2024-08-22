@@ -1,3 +1,27 @@
+//-------------- Compartir ubicacion -----------------
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("share-location").addEventListener("click", function() {
+        // Define la URL de la ubicación que quieres compartir
+        const locationURL = "https://maps.app.goo.gl/yL82Qrad6rf77WRs6";
+
+        // Crea el mensaje con la ubicación
+        const message = `Vení a disfrutar la experiencia Vares. Estamos aquí: ${locationURL}`;
+        
+        // Codifica el mensaje para que sea seguro en la URL
+        const encodedMessage = encodeURIComponent(message);
+        
+        // Crea el enlace para WhatsApp
+        const whatsappURL = `https://wa.me/?text=${encodedMessage}`;
+        
+        // Abre WhatsApp en una nueva ventana o pestaña
+        window.open(whatsappURL, '_blank');
+    });
+});
+
+
+
 // -------------- Index -----------------
 let lastClickedContainer = null;
 
@@ -386,17 +410,5 @@ window.addEventListener('DOMContentLoaded', function () {
 
 
 
-
-// otra opción:
-// agregar a cada .image-container: data-url="pagina1.html"
-
-// document.querySelectorAll('.image-container').forEach(container => {
-// container.addEventListener('click', function() {
-//     Espera un momento para que el efecto hover se complete
-//     setTimeout(() => {
-//     window.location.href = this.dataset.url;
-//     }, 200); // Ajusta el tiempo si es necesario
-// });
-// });
 
 

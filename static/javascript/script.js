@@ -1,3 +1,34 @@
+document.getElementById('formularioInicioSesion')?.addEventListener('submit', function (event) {
+    event.preventDefault();
+    
+    const usuario = document.getElementById('loginUsuario').value;
+    const contrasena = document.getElementById('loginContrasena').value;
+    
+    const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+    const usuarioEncontrado = usuarios.find(u => u.usuario === usuario && u.contrasena === contrasena);
+    
+    if (usuarioEncontrado) {
+        sessionStorage.setItem('usuarioActual', JSON.stringify(usuarioEncontrado));
+        console.log(usuarioEncontrado);
+        
+        usuarioLogueado = usuarioEncontrado
+        
+        console.log(usuarioLogueado);
+        
+        alert('Inicio de sesión exitoso.');
+        document.getElementById('formularioInicioSesion').reset();
+        window.location.href = '/index';
+    } else {
+        alert('Nombre de usuario o contraseña incorrectos.');
+    }
+});
+
+let usuarioLogueado = JSON.parse(sessionStorage?.getItem('usuarioActual')) || '';
+
+console.log(usuarioLogueado);
+
+let saludo = document.getElementById('saludo_user')
+saludo.innerHTML+=`Hola, ${usuarioLogueado.nombre}`
 //-------------- Compartir ubicacion -----------------
 
 
@@ -324,25 +355,6 @@ document.getElementById('formularioRegistro').addEventListener('submit', functio
     }
 });
 
-document.getElementById('formularioInicioSesion').addEventListener('submit', function (event) {
-    event.preventDefault();
-
-    const usuario = document.getElementById('loginUsuario').value;
-    const contrasena = document.getElementById('loginContrasena').value;
-
-    const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
-    const usuarioEncontrado = usuarios.find(u => u.usuario === usuario && u.contrasena === contrasena);
-
-    if (usuarioEncontrado) {
-        sessionStorage.setItem('usuarioActual', JSON.stringify({ usuario }));
-        // alert('Inicio de sesión exitoso.');
-        document.getElementById('formularioInicioSesion').reset();
-        window.location.href = '/index';
-    } else {
-        alert('Nombre de usuario o contraseña incorrectos.');
-    }
-});
-
 const validarRegistro = (nombre,apellido,telefono,dni,email,usuario,contrasena,contrasenaRepeted) => {
     if (!usuario || usuario.length < 5) {
         alert('El nombre de usuario debe tener al menos 5 caracteres.');
@@ -407,8 +419,4 @@ window.addEventListener('DOMContentLoaded', function () {
         loginModal.show();
     }
 });
-
-
-
-
 
